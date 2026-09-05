@@ -1,0 +1,1014 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/sm8ckd",
+    "id": "sm8ckd",
+    "slide": 7,
+    "layoutId": "3096b12a-a4e9-4413-8181-4f064b3e3872",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "48fa73b8-e603-42b2-b1c2-66e7cc6578c7",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#1B1B19",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial Unicode MS"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "3096b12a-a4e9-4413-8181-4f064b3e3872",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "48fa73b8-e603-42b2-b1c2-66e7cc6578c7",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "48fa73b8-e603-42b2-b1c2-66e7cc6578c7",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4n2t0jel",
+      "id": "1",
+      "bbox": [
+        44,
+        34,
+        680,
+        22
+      ],
+      "geometry": "rect",
+      "text": "FLOOR PLAN 03",
+      "textPreview": "FLOOR PLAN 03",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#A98F73",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "FLOOR PLAN 03"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "FLOOR PLAN 03",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#A98F73",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "FLOOR PLAN 03",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#A98F73",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jm9s7ex0",
+      "id": "2",
+      "bbox": [
+        44,
+        66,
+        1120,
+        52
+      ],
+      "geometry": "rect",
+      "text": "3階｜個室・収納・光",
+      "textPreview": "3階｜個室・収納・光",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 34,
+        "typeface": "Arial Unicode MS",
+        "color": "#EEEAE2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3階｜個室・収納・光"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3階｜個室・収納・光",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Arial Unicode MS",
+            "color": "#EEEAE2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3階｜個室・収納・光",
+              "fontSize": 34,
+              "typeface": "Arial Unicode MS",
+              "color": "#EEEAE2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/il0by9wf",
+      "id": "3",
+      "bbox": [
+        44,
+        126,
+        1192,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#31302C",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hkra54fu",
+      "id": "4",
+      "bbox": [
+        44,
+        678,
+        500,
+        18
+      ],
+      "geometry": "rect",
+      "text": "ASAKA HAMAZAKI 3-CHOME / 2",
+      "textPreview": "ASAKA HAMAZAKI 3-CHOME / 2",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ASAKA HAMAZAKI 3-CHOME / 2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ASAKA HAMAZAKI 3-CHOME / 2",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ASAKA HAMAZAKI 3-CHOME / 2",
+              "fontSize": 11,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/wjitwje9",
+      "id": "5",
+      "bbox": [
+        1185,
+        676,
+        50,
+        18
+      ],
+      "geometry": "rect",
+      "text": "07",
+      "textPreview": "07",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "07"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "07",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "07",
+              "fontSize": 11,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/ud8v2pwb",
+      "id": "6",
+      "bbox": [
+        44,
+        155,
+        710,
+        485
+      ],
+      "alt": "3階平面図",
+      "contentType": "image/jpeg",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "20e96a96-d8d2-4d4a-a0c5-1e5baf2ae0e7",
+        "contentType": "image/jpeg",
+        "byteLength": 230742
+      }
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/uh0bu9wj",
+      "id": "7",
+      "bbox": [
+        250,
+        330,
+        30,
+        30
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#A98F73",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gra14fy",
+      "id": "8",
+      "bbox": [
+        250,
+        335,
+        30,
+        18
+      ],
+      "geometry": "rect",
+      "text": "1",
+      "textPreview": "1",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#181816",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "1"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "1",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#181816",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "1",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#181816",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8vytszed",
+      "id": "9",
+      "bbox": [
+        520,
+        255,
+        30,
+        30
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#A98F73",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ehwfm1w7",
+      "id": "10",
+      "bbox": [
+        520,
+        260,
+        30,
+        18
+      ],
+      "geometry": "rect",
+      "text": "2",
+      "textPreview": "2",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#181816",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "2",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#181816",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "2",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#181816",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fi5wf6dc",
+      "id": "11",
+      "bbox": [
+        610,
+        420,
+        30,
+        30
+      ],
+      "geometry": "ellipse",
+      "fillColor": "#A98F73",
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gjexobex",
+      "id": "12",
+      "bbox": [
+        610,
+        425,
+        30,
+        18
+      ],
+      "geometry": "rect",
+      "text": "3",
+      "textPreview": "3",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#181816",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "3"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "3",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#181816",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "3",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#181816",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1knehgvi",
+      "id": "13",
+      "bbox": [
+        830,
+        168,
+        360,
+        28
+      ],
+      "geometry": "rect",
+      "text": "01  3つの個室",
+      "textPreview": "01  3つの個室",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "Arial Unicode MS",
+        "color": "#EEEAE2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "01  3つの個室"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "01  3つの個室",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "Arial Unicode MS",
+            "color": "#EEEAE2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "01  3つの個室",
+              "fontSize": 20,
+              "typeface": "Arial Unicode MS",
+              "color": "#EEEAE2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6dcfihwv",
+      "id": "14",
+      "bbox": [
+        830,
+        201,
+        360,
+        58
+      ],
+      "geometry": "rect",
+      "text": "6帖・5帖・4.5帖。家族それぞれの時間を確保。",
+      "textPreview": "6帖・5帖・4.5帖。家族それぞれの時間を確保。",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "6帖・5帖・4.5帖。家族それぞれの時間を確保。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "6帖・5帖・4.5帖。家族それぞれの時間を確保。",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "6帖・5帖・4.5帖。家族それぞれの時間を確保。",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/relwbmdg",
+      "id": "15",
+      "bbox": [
+        830,
+        323,
+        360,
+        28
+      ],
+      "geometry": "rect",
+      "text": "02  各室収納",
+      "textPreview": "02  各室収納",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "Arial Unicode MS",
+        "color": "#EEEAE2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "02  各室収納"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "02  各室収納",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "Arial Unicode MS",
+            "color": "#EEEAE2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "02  各室収納",
+              "fontSize": 20,
+              "typeface": "Arial Unicode MS",
+              "color": "#EEEAE2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sfuxkre1",
+      "id": "16",
+      "bbox": [
+        830,
+        356,
+        360,
+        58
+      ],
+      "geometry": "rect",
+      "text": "居室ごとに収納を設け、床面をすっきり使いやすく。",
+      "textPreview": "居室ごとに収納を設け、床面をすっきり使いやすく。",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "居室ごとに収納を設け、床面をすっきり使いやす"
+          },
+          {
+            "index": 2,
+            "text": "く。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "居室ごとに収納を設け、床面をすっきり使いやすく。",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "居室ごとに収納を設け、床面をすっきり使いやすく。",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tgnedwvm",
+      "id": "17",
+      "bbox": [
+        830,
+        478,
+        360,
+        28
+      ],
+      "geometry": "rect",
+      "text": "03  2面バルコニー",
+      "textPreview": "03  2面バルコニー",
+      "resolvedFontSize": 20,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 20,
+        "typeface": "Arial Unicode MS",
+        "color": "#EEEAE2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "03  2面バルコニー"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "03  2面バルコニー",
+          "resolvedTextStyle": {
+            "fontSize": 20,
+            "typeface": "Arial Unicode MS",
+            "color": "#EEEAE2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "03  2面バルコニー",
+              "fontSize": 20,
+              "typeface": "Arial Unicode MS",
+              "color": "#EEEAE2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ipcvehwz",
+      "id": "18",
+      "bbox": [
+        830,
+        511,
+        360,
+        58
+      ],
+      "geometry": "rect",
+      "text": "外への抜けを複数方向に設け、採光と通風に配慮。",
+      "textPreview": "外への抜けを複数方向に設け、採光と通風に配慮。",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "外への抜けを複数方向に設け、採光と通風に配慮"
+          },
+          {
+            "index": 2,
+            "text": "。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "外への抜けを複数方向に設け、採光と通風に配慮。",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "外への抜けを複数方向に設け、採光と通風に配慮。",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

@@ -1,0 +1,428 @@
+<title>ランドスタイル業務フロー仮説</title>
+<style>
+  :root{
+    --a-bg:#e4efe6; --a-bd:#7fa889; --a-tx:#2f5c3a;
+    --b-bg:#e2ebf5; --b-bd:#7fa0c4; --b-tx:#2c4c72;
+    --c-bg:#eeeeec; --c-bd:#a8a8a2; --c-tx:#54524c;
+    --fire:#e07a3f;
+    --ink:#2b2a26;
+    --sub:#6b6a63;
+    --line:#c9c6bd;
+    --paper:#fdfcf9;
+    --card-bg:#ffffff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html,body{background:var(--paper);color:var(--ink);}
+  body{
+    font-family:-apple-system,"Hiragino Sans","Yu Gothic",sans-serif;
+    font-size:11px;
+    line-height:1.4;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  @page{ size:420mm 297mm; margin:8mm; }
+
+  .page{
+    width:404mm;
+    min-height:281mm;
+    margin:0 auto 10mm auto;
+    padding:5mm 7mm 6mm 7mm;
+    background:var(--paper);
+    page-break-after:always;
+    display:flex;
+    flex-direction:column;
+  }
+  .page:last-child{page-break-after:auto;}
+  @media screen{
+    body{overflow-x:hidden;}
+    .page{
+      width:100%;
+      max-width:1700px;
+      min-height:unset;
+      box-shadow:0 0 0 1px var(--line);
+      margin:14px auto;
+    }
+  }
+
+  /* ---------- header ---------- */
+  h1{font-size:20px;font-weight:700;letter-spacing:.02em;}
+  .subtitle{font-size:12.5px;color:var(--sub);margin-top:2mm;font-weight:600;}
+  .note{font-size:10px;color:var(--sub);margin-top:1mm;}
+
+  /* ---------- legend ---------- */
+  .legend{
+    display:flex;align-items:center;gap:5mm;flex-wrap:wrap;
+    margin-top:3mm;padding:2mm 3mm;
+    border:0.4mm solid var(--line);border-radius:2mm;
+    background:#f7f5ef;
+  }
+  .legend-item{display:flex;align-items:center;gap:1.5mm;font-size:10px;}
+  .swatch{width:5mm;height:3.6mm;border-radius:1mm;border:0.3mm solid;display:inline-block;flex:none;}
+  .swatch.a{background:var(--a-bg);border-color:var(--a-bd);}
+  .swatch.b{background:var(--b-bg);border-color:var(--b-bd);}
+  .swatch.c{background:var(--c-bg);border-color:var(--c-bd);}
+  .legend-sep{color:var(--line);}
+  .fire-note{font-size:10px;color:var(--fire);font-weight:700;}
+
+  /* ---------- flow ---------- */
+  .flow{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    margin-top:3mm;
+    gap:1.4mm;
+  }
+  .phase-row{
+    display:flex;
+    align-items:stretch;
+    gap:2.5mm;
+  }
+  .phase-tag{
+    flex:0 0 20mm;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background:#efece2;
+    border:0.4mm solid var(--line);
+    border-radius:1.5mm;
+    padding:1mm;
+    font-weight:700;
+    font-size:10.5px;
+    color:var(--ink);
+  }
+  .phase-tag .now{
+    margin-top:1mm;
+    font-size:8.6px;
+    font-weight:700;
+    color:var(--fire);
+    line-height:1.25;
+  }
+  .cards{
+    flex:1;
+    display:flex;
+    align-items:stretch;
+    gap:2mm;
+  }
+  .card{
+    flex:1;
+    min-width:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    gap:0.8mm;
+    padding:1.6mm 2.2mm;
+    border-radius:1.8mm;
+    border:0.35mm solid;
+    background:var(--card-bg);
+    position:relative;
+  }
+  .card.cls-a{border-color:var(--a-bd);background:var(--a-bg);}
+  .card.cls-b{border-color:var(--b-bd);background:var(--b-bg);}
+  .card.cls-c{border-color:var(--c-bd);background:var(--c-bg);}
+  .card.hot{border-width:0.7mm;border-color:var(--fire);box-shadow:0 0 0 0.35mm var(--fire) inset;}
+  .card-top{display:flex;align-items:baseline;gap:1.2mm;}
+  .step-no{font-size:12.5px;font-weight:800;color:var(--ink);flex:none;}
+  .step-name{font-size:10.6px;font-weight:700;color:var(--ink);line-height:1.22;}
+  .badges{display:flex;align-items:center;gap:1.4mm;flex-wrap:wrap;}
+  .badge{
+    display:inline-block;font-size:8.6px;font-weight:800;
+    padding:0.2mm 1.4mm;border-radius:3mm;border:0.3mm solid;
+    letter-spacing:.02em;
+  }
+  .badge.a{color:var(--a-tx);border-color:var(--a-bd);background:#fff;}
+  .badge.b{color:var(--b-tx);border-color:var(--b-bd);background:#fff;}
+  .badge.c{color:var(--c-tx);border-color:var(--c-bd);background:#fff;}
+  .hot-mark{color:var(--fire);font-size:9.5px;font-weight:800;}
+  .metric{font-size:8.8px;color:var(--sub);font-weight:700;}
+  .comment{font-size:9.4px;color:#4c4a44;line-height:1.28;}
+
+  .row-arrow{
+    display:flex;align-items:center;justify-content:center;
+    flex:0 0 20mm;
+    font-size:10px;color:var(--sub);
+  }
+  .down-arrows{
+    display:flex;
+    padding-left:0mm;
+    height:2mm;
+    align-items:center;
+  }
+  .down-arrows span{
+    flex:0 0 20mm;text-align:center;color:var(--sub);font-size:9px;
+  }
+  .mid-arrow{
+    display:flex;align-items:center;justify-content:center;
+    flex:0 0 4mm;color:var(--sub);font-size:10px;font-weight:700;
+  }
+
+  /* ---------- section pages ---------- */
+  h2{font-size:22px;font-weight:800;margin-bottom:3mm;}
+  .section-note{font-size:13px;color:var(--sub);margin-bottom:6mm;}
+
+  .order-flow{
+    display:flex;align-items:stretch;gap:4mm;margin-top:6mm;flex-wrap:wrap;
+  }
+  .order-step{
+    flex:1;min-width:48mm;
+    border:0.5mm solid var(--b-bd);
+    background:var(--b-bg);
+    border-radius:3mm;
+    padding:7mm 6mm;
+    display:flex;flex-direction:column;gap:3mm;
+  }
+  .order-step.now{border-color:var(--fire);border-width:0.8mm;background:#fbeee4;}
+  .order-step .tag{font-size:11.5px;font-weight:800;color:var(--sub);}
+  .order-step .name{font-size:18px;font-weight:800;}
+  .order-step .money{font-size:14.5px;font-weight:800;color:var(--b-tx);}
+  .order-step.now .money{color:var(--fire);}
+  .order-step .why{font-size:12.5px;color:#4c4a44;line-height:1.55;}
+  .order-arrow{
+    display:flex;align-items:center;justify-content:center;
+    font-size:20px;color:var(--sub);font-weight:700;flex:0 0 10mm;
+  }
+
+  .noauto{
+    margin-top:10mm;
+    border:0.5mm solid var(--c-bd);
+    background:var(--c-bg);
+    border-radius:3mm;
+    padding:9mm 10mm;
+  }
+  .noauto h3{font-size:17px;font-weight:800;margin-bottom:5mm;}
+  .noauto ul{list-style:none;display:flex;flex-direction:column;gap:4mm;}
+  .noauto li{
+    font-size:13.5px;line-height:1.6;
+    padding-left:5mm;position:relative;
+  }
+  .noauto li::before{content:"■";position:absolute;left:0;color:var(--c-tx);font-size:9px;top:3px;}
+  .noauto li b{font-weight:800;}
+  .noauto .principle{
+    margin-top:6mm;font-size:15px;font-weight:800;color:var(--ink);
+    border-top:0.3mm solid var(--c-bd);padding-top:5mm;
+  }
+
+  .foot{margin-top:auto;padding-top:3mm;font-size:8.6px;color:var(--sub);border-top:0.3mm solid var(--line);}
+</style>
+
+<!-- ============================================================ -->
+<!-- PAGE 1: メインフロー -->
+<!-- ============================================================ -->
+<div class="page">
+  <h1>株式会社ランドスタイル　業務フロー仮説とAI活用ポイント</h1>
+  <div class="subtitle">16ステップ／6フェーズ・推定 週22.5時間＝月19.4万円分の定型作業</div>
+  <div class="note">※業界一般フローに公開情報を重ねた仮説。★は未確認</div>
+
+  <div class="legend">
+    <div class="legend-item"><span class="swatch a"></span>A：今すぐ生成AIで／社員が自分でできる</div>
+    <div class="legend-item"><span class="swatch b"></span>B：仕組みを作れば自動化できる</div>
+    <div class="legend-item"><span class="swatch c"></span>C：人がやるべき</div>
+    <span class="legend-sep">｜</span>
+    <div class="legend-item fire-note">🔥 特に効きそうな箇所（5・7・11・12・13）</div>
+  </div>
+
+  <div class="flow">
+
+    <div class="phase-row">
+      <div class="phase-tag">フェーズ0<br>仕入れ</div>
+      <div class="cards">
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">1</span><span class="step-name">土地情報の入手・一次スクリーニング</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週1.5h／月13,000円</span></div>
+          <div class="comment">FAX/メール情報を一元化・地図化で見落とし防止</div>
+        </div>
+        <div class="card cls-c">
+          <div class="card-top"><span class="step-no">2</span><span class="step-name">現地/法規調査＋事業収支</span></div>
+          <div class="badges"><span class="badge c">C</span><span class="metric">週1.0h／月8,600円</span></div>
+          <div class="comment">収支Excelが物件別バラバラなら統一の余地あり</div>
+        </div>
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">3</span><span class="step-name">買付〜土地決済</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週0.5h／月4,300円</span></div>
+          <div class="comment">期限の逆算リマインドのみ自動化。交渉・決裁は人</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="down-arrows"><span>↓</span></div>
+
+    <div class="phase-row">
+      <div class="phase-tag">フェーズ1<br>企画・設計・申請</div>
+      <div class="cards">
+        <div class="card cls-c">
+          <div class="card-top"><span class="step-no">4</span><span class="step-name">商品企画・プラン・実行予算</span></div>
+          <div class="badges"><span class="badge c">C</span><span class="metric">週1.0h／月8,600円</span></div>
+          <div class="comment">「誰にいくらで売るか」は社長判断。ここは触らない</div>
+        </div>
+        <div class="card cls-b hot">
+          <div class="card-top"><span class="step-no">5</span><span class="step-name">確認申請図書・申請・瑕疵保険</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="hot-mark">🔥</span><span class="metric">週1.5h／月13,000円</span></div>
+          <div class="comment">設計者1名なら最大のボトルネック。進捗が一目で分かる盤面が効く</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="down-arrows"><span>↓</span></div>
+
+    <div class="phase-row">
+      <div class="phase-tag">フェーズ2<br>発注・原価</div>
+      <div class="cards">
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">6</span><span class="step-name">見積依頼・相見積比較</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週2.0h／月17,000円</span></div>
+          <div class="comment">固定業者と相見積の比率次第で効果が変わる</div>
+        </div>
+        <div class="card cls-b hot">
+          <div class="card-top"><span class="step-no">7</span><span class="step-name">発注書・下請契約書面の交付</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="hot-mark">🔥</span><span class="metric">週1.5h／月13,000円</span></div>
+          <div class="comment">100%定型。建設業法の記載項目もテンプレ化できる</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="down-arrows"><span>↓</span></div>
+
+    <div class="phase-row">
+      <div class="phase-tag">フェーズ3<br>施工・工程</div>
+      <div class="cards">
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">8</span><span class="step-name">工程表作成と日程手配</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週1.5h／月13,000円</span></div>
+          <div class="comment">1日ズレたときの再連絡が地味に重い</div>
+        </div>
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">9</span><span class="step-name">現場連絡・変更対応・写真記録</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週2.0h／月17,000円</span></div>
+          <div class="comment">LINE個別/グループ・写真保管がバラける可能性</div>
+        </div>
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">10</span><span class="step-name">検査の段取り</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週1.0h／月8,600円</span></div>
+          <div class="comment">工程日から機械的に決まる。リマインドのみ</div>
+        </div>
+        <div class="card cls-b hot">
+          <div class="card-top"><span class="step-no">11</span><span class="step-name">出来高→請求書照合→支払【月次締め】</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="hot-mark">🔥</span><span class="metric">週3.0h／月26,000円</span></div>
+          <div class="comment">業界最大の負荷。インボイス対応で線引きが必須。最初には出さない</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="down-arrows"><span>↓</span></div>
+
+    <div class="phase-row">
+      <div class="phase-tag">フェーズ4<br>販売
+        <div class="now">← いま関わっている領域</div>
+      </div>
+      <div class="cards">
+        <div class="card cls-a hot">
+          <div class="card-top"><span class="step-no">12</span><span class="step-name">販売準備（価格決定・マイソク作成・現地撮影）</span></div>
+          <div class="badges"><span class="badge a">A</span><span class="badge b">B</span><span class="hot-mark">🔥</span><span class="metric">週1.0h／月8,600円</span></div>
+          <div class="comment">写真・パースが構造的に薄い。紹介文はAですぐ渡せる</div>
+        </div>
+        <div class="card cls-b hot">
+          <div class="card-top"><span class="step-no">13</span><span class="step-name">業者間配信＋ポータル掲載・価格改定</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="hot-mark">🔥🔥</span><span class="metric">週2.5h／月21,500円</span></div>
+          <div class="comment">MVP候補No.1。物件マスタ＋一斉配信＋滞留アラート</div>
+        </div>
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">14</span><span class="step-name">反響対応・内見・追客</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週1.0h／月8,600円</span></div>
+          <div class="comment">一次返信・予約枠・追客タスク生成はB。接客は人</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="down-arrows"><span>↓</span></div>
+
+    <div class="phase-row">
+      <div class="phase-tag">フェーズ5<br>契約・引渡し</div>
+      <div class="cards">
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">15</span><span class="step-name">売買契約→ローン→決済・引渡し</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週0.5h／月4,300円</span></div>
+          <div class="comment">重要事項説明は宅建士の法的責任。絶対に自動化しない</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="down-arrows"><span>↓</span></div>
+
+    <div class="phase-row">
+      <div class="phase-tag">フェーズ6<br>アフター</div>
+      <div class="cards">
+        <div class="card cls-b">
+          <div class="card-top"><span class="step-no">16</span><span class="step-name">不具合受付・業者手配・定期点検</span></div>
+          <div class="badges"><span class="badge b">B</span><span class="metric">週1.0h／月8,600円</span></div>
+          <div class="comment">受付が代表電話か担当携帯か。携帯なら情報が個人に埋まる典型</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="foot">出典：業界一般フロー = it-consultant/research/workflows/new-build-housing-developer.md（数値はすべて推定・要ヒアリング前提）／同社固有情報 = Research/ランドスタイル調査と差別化戦略.md</div>
+</div>
+
+<!-- ============================================================ -->
+<!-- PAGE 2: 提案の順番／触らない領域 -->
+<!-- ============================================================ -->
+<div class="page">
+  <h1>提案の順番と、触らない領域</h1>
+  <div class="subtitle">株式会社ランドスタイル　業務フロー仮説とAI活用ポイント（続き）</div>
+
+  <h2 style="margin-top:8mm;">提案の順番　12（いま）→13（次）→7→11→5</h2>
+  <div class="section-note">いま進行中のステップ12から真隣に広がる一本道。金額が最も大きい11をあえて最初に持っていかないのがポイント。</div>
+
+  <div class="order-flow">
+    <div class="order-step now">
+      <div class="tag">STEP1・いま</div>
+      <div class="name">12. 販売準備</div>
+      <div class="money">パース・動画で「見せ方」を埋める</div>
+      <div class="why">実行中の案件そのもの。写真・パースが構造的に薄い弱点を直接埋める。</div>
+    </div>
+    <div class="order-arrow">→</div>
+    <div class="order-step">
+      <div class="tag">STEP2・次</div>
+      <div class="name">13. 業者間配信</div>
+      <div class="money">初期10〜30万円／週2.5h・月21,500円</div>
+      <div class="why">物件マスタ＋一斉配信＋滞留アラート。効果測定しやすく、宅建業者全般に横展開可。</div>
+    </div>
+    <div class="order-arrow">→</div>
+    <div class="order-step">
+      <div class="tag">STEP3</div>
+      <div class="name">7. 発注書自動生成</div>
+      <div class="money">週1.5h・月13,000円</div>
+      <div class="why">100%定型・低リスク。効果が出てから広げる隣接領域。</div>
+    </div>
+    <div class="order-arrow">→</div>
+    <div class="order-step">
+      <div class="tag">STEP4・本命</div>
+      <div class="name">11. 請求書照合・支払</div>
+      <div class="money">週3.0h・月26,000円（最大）</div>
+      <div class="why">金額で最も刺さるが税務要件の線引きが要る。最初に持っていくと決裁のブレーキになるため後段に置く。</div>
+    </div>
+    <div class="order-arrow">→</div>
+    <div class="order-step">
+      <div class="tag">並行・地味に効く</div>
+      <div class="name">5. 申請ステータス盤面</div>
+      <div class="money">週1.5h・月13,000円</div>
+      <div class="why">設計ボトルネックの可視化。11と並行して進める。</div>
+    </div>
+  </div>
+
+  <div class="noauto">
+    <h3>触らない領域（C分類）</h3>
+    <ul>
+      <li><b>重要事項説明</b>（ステップ15）── 宅建士の法的責任。提案の信頼性はここを触らないことで担保される。</li>
+      <li><b>仕入れ判断</b>（ステップ2・3）── 「買うか」の決裁は社長の経営判断。法規解釈の責任も伴う。</li>
+      <li><b>出来高の妥当性確認</b>（ステップ11）── 現場を見た人にしか判断できない。金額突合はBでも、出来高そのものはC。</li>
+      <li><b>接客</b>（ステップ14・16）── 内見のクロージング、引渡し後の顧客対応は人がやるべき領域。</li>
+    </ul>
+    <div class="principle">置き換えるのではなく、ここに集中できるようにする。</div>
+  </div>
+
+  <div class="foot">出典：01_ランドスタイル業務フロー仮説.md／research/workflows/new-build-housing-developer.md（数値は推定・要ヒアリング前提）</div>
+</div>

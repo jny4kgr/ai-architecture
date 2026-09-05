@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>ランドスタイル AI講習会</title>
+<style>
+  :root{
+    --navy:#1a2b44;
+    --navy-soft:#2c3e5c;
+    --orange:#e07a3f;
+    --bg:#ffffff;
+    --text:#25303f;
+    --muted:#6b7686;
+    --line:#dde2e8;
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0;padding:0;
+    background:#9aa5b3;
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",sans-serif;
+    color:var(--text);
+    width:100%;height:100%;
+    overflow:hidden;
+  }
+  #stage-wrap{
+    position:fixed;inset:0;
+    display:flex;align-items:center;justify-content:center;
+  }
+  #stage{
+    position:relative;
+    width:1280px;height:720px;
+    transform-origin:center center;
+  }
+  .slide{
+    position:absolute;top:0;left:0;
+    width:1280px;height:720px;
+    background:var(--bg);
+    padding:64px 84px;
+    display:none;
+    flex-direction:column;
+    overflow:hidden;
+    box-shadow:0 0 0 1px rgba(0,0,0,0.04);
+  }
+  .slide.active{display:flex;}
+
+  .pagenum{
+    position:absolute;
+    right:28px;bottom:20px;
+    font-size:15px;
+    color:var(--muted);
+    letter-spacing:0.02em;
+  }
+  .divider .pagenum{color:rgba(255,255,255,0.55);}
+
+  /* ---- typography ---- */
+  h1.heading{
+    font-size:46px;
+    font-weight:700;
+    color:var(--navy);
+    margin:0 0 8px 0;
+    line-height:1.3;
+    border-left:10px solid var(--orange);
+    padding-left:24px;
+  }
+  .subtext{
+    font-size:24px;
+    color:var(--muted);
+    margin:6px 0 0 34px;
+  }
+  .caption{
+    font-size:26px;
+    color:var(--navy-soft);
+    margin:18px 0 0 0;
+    line-height:1.6;
+  }
+  .body{
+    margin-top:40px;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+
+  ul.bullets, ol.bullets{
+    font-size:30px;
+    line-height:1.9;
+    color:var(--text);
+    margin:0;
+    padding-left:44px;
+  }
+  ul.bullets li, ol.bullets li{margin-bottom:14px;}
+  ul.bullets li::marker{color:var(--orange);}
+  ol.bullets li::marker{color:var(--orange);font-weight:700;}
+
+  ul.bullets.small, ol.bullets.small{font-size:26px;}
+
+  table.tbl{
+    width:100%;
+    border-collapse:collapse;
+    font-size:23px;
+    table-layout:fixed;
+  }
+  table.tbl th{
+    background:var(--navy);
+    color:#fff;
+    font-weight:700;
+    text-align:left;
+    padding:14px 18px;
+    font-size:22px;
+  }
+  table.tbl td{
+    padding:16px 18px;
+    border-bottom:1px solid var(--line);
+    vertical-align:top;
+    line-height:1.5;
+  }
+  table.tbl tr:nth-child(even) td{background:#f6f8fa;}
+  table.tbl td.accent{color:var(--orange);font-weight:700;}
+  table.tbl tr.hot td{background:#fdece0;}
+  table.tbl tr.hot td:first-child{color:var(--orange);font-weight:800;}
+  table.tbl tr.hot:nth-child(even) td{background:#fce0cc;}
+  table.tbl td.unconfirmed{color:var(--muted);font-style:italic;}
+
+  table.tbl.big{font-size:22px;}
+  table.tbl.big th{font-size:21px;padding:12px 20px;}
+  table.tbl.big td{padding:14px 20px;line-height:1.45;}
+
+  table.tbl.compact{font-size:19px;}
+  table.tbl.compact th{font-size:18px;padding:9px 16px;}
+  table.tbl.compact td{padding:9px 16px;line-height:1.35;}
+  table.tbl.compact tr.hot td:first-child{font-size:19px;}
+
+  .status-pill{
+    display:inline-block;
+    padding:5px 14px;
+    border-radius:20px;
+    font-size:19px;
+    font-weight:700;
+    white-space:nowrap;
+  }
+  .status-pill.done{background:#eef2f6;color:var(--navy-soft);}
+  .status-pill.pending{background:#fff3e6;color:#b5651d;border:1px solid #f0c396;}
+
+  .emphasis-box{
+    margin-top:22px;
+    padding:22px 30px;
+    background:#fdece0;
+    border-left:8px solid var(--orange);
+    border-radius:8px;
+    font-size:28px;
+    font-weight:700;
+    color:var(--navy);
+    line-height:1.6;
+  }
+
+  /* ---- title slide ---- */
+  .slide.title{
+    justify-content:center;
+    align-items:flex-start;
+    background:var(--bg);
+  }
+  .slide.title .brand{
+    font-size:22px;color:var(--muted);letter-spacing:0.08em;margin-bottom:26px;
+  }
+  .slide.title h1{
+    font-size:60px;
+    color:var(--navy);
+    line-height:1.4;
+    margin:0 0 26px 0;
+    font-weight:800;
+  }
+  .slide.title .sub{
+    font-size:30px;
+    color:var(--orange);
+    font-weight:700;
+  }
+  .slide.title .bar{
+    width:120px;height:8px;background:var(--orange);margin-top:44px;
+  }
+
+  /* ---- divider slide ---- */
+  .slide.divider{
+    background:var(--navy);
+    justify-content:center;
+    align-items:flex-start;
+    padding:64px 100px;
+  }
+  .slide.divider .num{
+    font-size:150px;
+    font-weight:800;
+    color:rgba(255,255,255,0.16);
+    line-height:1;
+    margin-bottom:10px;
+  }
+  .slide.divider .ctitle{
+    font-size:56px;
+    font-weight:800;
+    color:#fff;
+    line-height:1.4;
+  }
+  .slide.divider .accentbar{
+    width:140px;height:8px;background:var(--orange);margin-top:36px;
+  }
+
+  /* ---- placeholder box ---- */
+  .placeholder{
+    border:3px dashed #b7c0cc;
+    border-radius:12px;
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--muted);
+    font-size:26px;
+    font-weight:700;
+    text-align:center;
+    background:#fafbfc;
+    padding:20px;
+  }
+  .placeholder-row{
+    display:flex;
+    gap:28px;
+    flex:1;
+    margin-top:20px;
+  }
+  .placeholder-row .placeholder{flex:1;}
+  .ph-label{
+    font-size:20px;
+    color:var(--navy-soft);
+    font-weight:700;
+    margin-bottom:10px;
+    text-align:center;
+  }
+  .ph-col{display:flex;flex-direction:column;flex:1;}
+
+  /* ---- two-column ---- */
+  .cols2{display:flex;gap:40px;flex:1;}
+  .cols2 > div{flex:1;}
+  .colhead{
+    font-size:26px;font-weight:700;color:var(--navy);
+    margin-bottom:14px;
+    padding-bottom:8px;
+    border-bottom:3px solid var(--orange);
+  }
+
+  /* ---- message slide (2行だけ) ---- */
+  .slide.message{
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+  }
+  .message-line{
+    font-size:42px;
+    font-weight:800;
+    color:var(--navy);
+    line-height:1.7;
+    max-width:1080px;
+  }
+  .message-line + .message-line{margin-top:22px;}
+  .message-line.orange{color:var(--orange);}
+
+  /* ---- milestone row (3回使うまでが山) ---- */
+  .milestone-row{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:18px;
+    flex:1;
+  }
+  .milestone{
+    background:#f6f8fa;
+    border:2px solid var(--line);
+    border-radius:16px;
+    padding:34px 20px;
+    text-align:center;
+    flex:1;
+  }
+  .milestone .m-num{
+    font-size:30px;font-weight:800;color:var(--navy);margin-bottom:12px;
+  }
+  .milestone .m-desc{
+    font-size:19px;color:var(--muted);line-height:1.5;
+  }
+  .milestone.highlight{
+    background:var(--orange);
+    border-color:var(--orange);
+    transform:scale(1.16);
+    box-shadow:0 10px 28px rgba(224,122,63,0.35);
+    z-index:2;
+  }
+  .milestone.highlight .m-num{color:#fff;font-size:36px;}
+  .milestone.highlight .m-desc{color:#fff;font-weight:700;font-size:21px;}
+  .m-arrow{font-size:30px;color:var(--muted);font-weight:700;}
+
+  /* ---- print ---- */
+  @media print{
+    html,body{overflow:visible;background:#fff;}
+    #stage-wrap{position:static;display:block;}
+    #stage{transform:none !important;width:auto;height:auto;}
+    .slide{
+      position:relative;
+      display:flex !important;
+      width:13.333in;height:7.5in;
+      page-break-after:always;
+      box-shadow:none;
+    }
+    @page{size:13.333in 7.5in;margin:0;}
+  }
+</style>
+</head>
+<body>
+
+<div id="stage-wrap">
+<div id="stage">
+
+<!-- スライド1: タイトル -->
+<section class="slide title active">
+  <div class="brand">株式会社ランドスタイル ／ AI講習会</div>
+  <div style="font-size:20px;color:var(--muted);margin-top:4px;letter-spacing:0.04em;">2026年8月24日（月）</div>
+  <h1>ランドスタイルの仕事と、<br>AIの使いどころ</h1>
+  <div class="sub">〜「明日、これをAIにやらせる」を1つ決めて帰る 〜</div>
+  <div class="bar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 中扉1 -->
+<section class="slide divider">
+  <div class="num">1</div>
+  <div class="ctitle">御社の仕事を<br>1枚にしました</div>
+  <div class="accentbar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド2: 業務フローmap全画面 -->
+<section class="slide">
+  <h1 class="heading">御社の仕事を、1枚にしました</h1>
+  <div class="placeholder" style="margin-top:24px;">【業務フロー図（16ステップ）をここに全画面で表示】</div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド3: だから何が起きるか -->
+<section class="slide">
+  <div class="body" style="justify-content:center;">
+    <h1 class="heading">だから何が起きるか</h1>
+    <div class="caption" style="font-size:32px;margin-top:34px;line-height:1.9;">
+      16ステップ ÷ 12名<br>
+      ＝ 一人が何役も持っている<br>
+      ＝ <span style="color:var(--orange);font-weight:700;">「中くらいに面倒な作業」</span>が、あちこちに散らばっている
+    </div>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド4: これは仮説です -->
+<section class="slide">
+  <h1 class="heading">【重要】これは仮説です</h1>
+  <div class="body">
+    <ul class="bullets">
+      <li>これは外から調べて作った<strong style="color:var(--orange);">仮説</strong>です</li>
+      <li>皆さんの実際の仕事は、まだ聞けていません</li>
+      <li>違うところがあったら<strong style="color:var(--orange);">遠慮なく言ってください</strong></li>
+      <li>「ウチはやってない」「もっと大変」「順番が違う」、何でもOK</li>
+    </ul>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 中扉2 -->
+<section class="slide divider">
+  <div class="num">2</div>
+  <div class="ctitle">そもそもAIとは<br>何なのか</div>
+  <div class="accentbar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド5: AIは検索ではない -->
+<section class="slide">
+  <div class="body" style="justify-content:center;">
+    <h1 class="heading">AIは「検索」ではない</h1>
+    <div class="caption" style="font-size:30px;margin-top:30px;">次に来る言葉を予測しているだけ。<br>その場で文章を作っている。</div>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド6: 本を読みまくった新人 -->
+<section class="slide">
+  <h1 class="heading">たとえるなら「本を読みまくった新人」</h1>
+  <div class="body">
+    <ul class="bullets">
+      <li>一般的なことは何でも知っている</li>
+      <li>文章を書かせたら速い</li>
+      <li>でも、ランドスタイルのことは何も知らない</li>
+      <li>そして、知らないことも自信満々に答える</li>
+    </ul>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド7: 覚えて帰る3つ -->
+<section class="slide">
+  <h1 class="heading">覚えて帰る3つ</h1>
+  <div class="body" style="margin-top:26px;">
+    <table class="tbl">
+      <tr><th style="width:42%;">性質</th><th style="width:58%;">だからこう使う</th></tr>
+      <tr><td>① 平均的にうまい</td><td class="accent">下書きに使い、仕上げは人がやる</td></tr>
+      <tr><td>② 知らないことも作る</td><td class="accent">数字・法令・物件情報は必ず人が確認</td></tr>
+      <tr><td>③ 教えた分だけ賢くなる</td><td class="accent">物件情報や過去の文章を一緒に渡す</td></tr>
+    </table>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド8: やってはいけないこと -->
+<section class="slide">
+  <h1 class="heading">やってはいけないこと（3つ）</h1>
+  <div class="body">
+    <ol class="bullets">
+      <li>お客様の氏名・住所・電話番号・契約情報を入れない（「A様」「◯◯市の物件」で伏せる）</li>
+      <li>出てきた数字・法令をそのまま信じない</li>
+      <li>お客様に出す最終文書を、読まずにそのまま出さない</li>
+    </ol>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 中扉3 -->
+<section class="slide divider">
+  <div class="num">3</div>
+  <div class="ctitle">このフローのどこに<br>AIが使えるか</div>
+  <div class="accentbar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド9: 3つに分けました -->
+<section class="slide">
+  <h1 class="heading">3つに分けました</h1>
+  <div class="body" style="margin-top:26px;">
+    <table class="tbl">
+      <tr><th style="width:10%;"></th><th style="width:52%;">意味</th><th style="width:38%;">誰がやる</th></tr>
+      <tr><td style="font-weight:800;color:var(--navy);font-size:28px;">A</td><td>今すぐ使える（文章を作る・要約する）</td><td class="accent">皆さんが自分で。今日から</td></tr>
+      <tr><td style="font-weight:800;color:var(--navy);font-size:28px;">B</td><td>仕組みを作れば自動化できる（転記・集計・一斉送信・期限管理）</td><td class="accent">作る必要がある</td></tr>
+      <tr><td style="font-weight:800;color:var(--navy);font-size:28px;">C</td><td>人がやるべき（判断・責任・対面）</td><td class="accent">ここは変わらない</td></tr>
+    </table>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド10: フローmap色分け版全画面 -->
+<section class="slide">
+  <h1 class="heading">3色で塗り分けました</h1>
+  <div class="placeholder" style="margin-top:24px;">【業務フロー図・A/B/C色分け版をここに全画面で表示】</div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド11: まずCの話から -->
+<section class="slide">
+  <h1 class="heading">まずCの話から（触らない領域）</h1>
+  <div class="body">
+    <ul class="bullets">
+      <li>土地を買うかどうかの判断</li>
+      <li>法適合の責任（一級建築士）</li>
+      <li><strong style="color:var(--orange);">重要事項説明</strong>（宅建士の法的責任）</li>
+      <li>出来高が本当にその割合かの確認</li>
+      <li>お客様への接客・クロージング</li>
+      <li>職人さんとの関係</li>
+    </ul>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド12: A -->
+<section class="slide">
+  <h1 class="heading">A — 今日から自分でできるところ</h1>
+  <div class="body" style="margin-top:20px;">
+    <table class="tbl">
+      <tr><th style="width:26%;">ステップ</th><th style="width:74%;">何ができるか</th></tr>
+      <tr><td>12. 販売準備</td><td>物件紹介文・キャッチコピーの下書き</td></tr>
+      <tr><td>13. 掲載</td><td>媒体別・お客様タイプ別の文章の書き分け</td></tr>
+      <tr><td>14. 追客</td><td>追客メール・一次返信の下書き</td></tr>
+      <tr><td>15前</td><td>専門用語をお客様の言葉に直す</td></tr>
+      <tr><td>12. 販売準備</td><td>周辺環境の紹介文（学校・スーパー・駅までの距離を、生活が想像できる文章に）</td></tr>
+      <tr><td>16. アフター</td><td>点検の案内文</td></tr>
+      <tr><td>全般</td><td>長文の要約・議事録・Excelの式</td></tr>
+    </table>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド13: B -->
+<section class="slide">
+  <h1 class="heading">B — 仕組みを作れば消せるところ</h1>
+  <div class="body" style="margin-top:8px;">
+    <table class="tbl compact">
+      <tr><th style="width:34%;">ステップ</th><th style="width:13%;">推定</th><th style="width:53%;">中身</th></tr>
+      <tr class="hot"><td>🔥 11. 請求書の照合・支払（月末の締め）</td><td>週3.0h</td><td>発注書とPDFの金額突合、支払一覧、振込データ</td></tr>
+      <tr class="hot"><td>🔥 13. 業者への一斉配信・掲載・価格改定</td><td>週2.5h</td><td>物件マスタ1枚から各媒体へ・滞留アラート</td></tr>
+      <tr class="hot"><td>🔥 6. 見積依頼・相見積の比較</td><td>週2.0h</td><td>依頼書生成・一斉送信・未提出リマインド</td></tr>
+      <tr class="hot"><td>🔥 7. 発注書・下請契約書面</td><td>—</td><td>台帳→書面生成→送付→記録（判断が一切ない）</td></tr>
+      <tr class="hot"><td>🔥 5. 確認申請のステータス管理</td><td>—</td><td>どの物件がどの段階か・期限の逆算</td></tr>
+      <tr class="hot"><td>🔥 12. 物件マスタ＋地図</td><td class="unconfirmed">★未確認</td><td>全物件を地図で一元管理 → 周辺施設までの距離を自動取得 → 物件概要・周辺環境の紙を自動生成</td></tr>
+      <tr><td>1. 土地情報の一次スクリーニング</td><td class="unconfirmed">★未確認</td><td>届いた土地情報を地図に自動で落とす・重複の検知</td></tr>
+    </table>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド14: 全部でどのくらいか -->
+<section class="slide">
+  <div class="body" style="justify-content:center;">
+    <h1 class="heading">全部でどのくらいか</h1>
+    <div class="caption" style="font-size:34px;font-weight:700;color:var(--navy-soft);margin-top:34px;">
+      推定 <span style="color:var(--orange);">週22.5時間</span> ＝ 月19.4万円分（時給2,000円換算）
+    </div>
+    <div class="caption" style="font-size:24px;margin-top:18px;">※ただし上位3つを全部つぶしても、その1/3</div>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 中扉4 -->
+<section class="slide divider">
+  <div class="num">4</div>
+  <div class="ctitle">実際に<br>やってきたこと</div>
+  <div class="accentbar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド15: 御社でやらせてもらっていること -->
+<section class="slide">
+  <h1 class="heading">御社でやらせてもらっていること（ステップ12）</h1>
+  <div class="placeholder-row">
+    <div class="ph-col">
+      <div class="ph-label">図面PDF</div>
+      <div class="placeholder">【当日：図面PDFの画像を差し込む】</div>
+    </div>
+    <div class="ph-col">
+      <div class="ph-label">外観・内観パース</div>
+      <div class="placeholder">【当日：生成パースの画像を差し込む】</div>
+    </div>
+    <div class="ph-col">
+      <div class="ph-label">提案資料12枚</div>
+      <div class="placeholder">【当日：提案資料の画像を差し込む】</div>
+    </div>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド16: いま、ある人材紹介の会社でやっていること -->
+<section class="slide">
+  <h1 class="heading">いま、ある人材紹介の会社でやっていること</h1>
+  <div class="body" style="margin-top:14px;justify-content:center;">
+    <table class="tbl big">
+      <tr>
+        <th style="width:26%;">業務の流れ</th>
+        <th style="width:27%;">元々どうだったか</th>
+        <th style="width:27%;">入れたもの</th>
+        <th style="width:20%;">状態</th>
+      </tr>
+      <tr>
+        <td>① 面談で聞いた内容を書類にする</td>
+        <td>音声メモ・手書き・PDF・Wordとバラバラな形で集まる</td>
+        <td class="accent">決まった書式へ自動で転記</td>
+        <td><span class="status-pill done">実装済み</span></td>
+      </tr>
+      <tr>
+        <td>② 求職者へのフォロー連絡</td>
+        <td>担当者が気づいたときに手で送る</td>
+        <td class="accent">定型の連絡を自動投稿</td>
+        <td><span class="status-pill done">稼働中</span></td>
+      </tr>
+      <tr>
+        <td>③ 毎朝の数字の集計</td>
+        <td>事務の方が毎朝手で拾って入力</td>
+        <td class="accent">元データから自動集計</td>
+        <td><span class="status-pill pending">テスト完了・導入待ち</span></td>
+      </tr>
+      <tr>
+        <td>④ 月の目標に対する着地</td>
+        <td>都度、人が計算して共有</td>
+        <td class="accent">自動で通知</td>
+        <td><span class="status-pill done">稼働中</span></td>
+      </tr>
+    </table>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド17: 一番効いたのはこれ -->
+<section class="slide">
+  <h1 class="heading">一番効いたのはこれ</h1>
+  <div class="body">
+    <div class="caption" style="font-size:28px;font-weight:700;color:var(--navy);margin-top:0;">毎朝「ほぼ1日仕事」だった集計</div>
+    <ul class="bullets" style="margin-top:22px;">
+      <li>事務の方が毎朝、10〜20通りの組み合わせの数字を手で拾って入力していた</li>
+      <li>→ 元データから自動で集計するようにした</li>
+    </ul>
+    <div class="emphasis-box">＋ 数字が合っているか、先方が自分で確かめられる資料も一緒に作った</div>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド18: ちなみに、自分の事務は -->
+<section class="slide">
+  <h1 class="heading">ちなみに、自分の事務は</h1>
+  <div class="body">
+    <ul class="bullets">
+      <li>経理の記帳</li>
+      <li>日報</li>
+      <li>未読チャットの整理</li>
+    </ul>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 中扉5 -->
+<section class="slide divider">
+  <div class="num">5</div>
+  <div class="ctitle">使い方の解説と、<br>正直な話</div>
+  <div class="accentbar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド19: 画面はこれだけです -->
+<section class="slide">
+  <h1 class="heading">画面はこれだけです</h1>
+  <div class="caption">「ここに打つ」→「ここに返ってくる」。それだけです。</div>
+  <div class="placeholder" style="margin-top:20px;">【当日：実際の画面のスクリーンショットを表示（入力欄→出力欄を矢印で示す）】</div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド20: メッセージスライド -->
+<section class="slide message">
+  <div class="message-line">今日1日で使えるようにはなりません。</div>
+  <div class="message-line orange">使い始められるようには、なります。</div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド21: つまずくのは3つだけ -->
+<section class="slide">
+  <h1 class="heading">つまずくのは、この3つだけ</h1>
+  <div class="body" style="margin-top:16px;">
+    <table class="tbl">
+      <tr><th style="width:24%;">つまずき</th><th style="width:36%;">何が起きているか</th><th style="width:40%;">越え方</th></tr>
+      <tr><td>① 何を頼めばいいか分からない</td><td>白紙の箱を前に手が止まる</td><td class="accent">配布資料のプロンプトをコピペする</td></tr>
+      <tr><td>② 頼み方が雑で、雑な答えが返る</td><td>「紹介文書いて」→ 当たり障りのない文</td><td class="accent">材料を渡す。間取り・立地・価格・お客様像</td></tr>
+      <tr><td>③ 返ってきたものを直せない</td><td>惜しいけど違う、で諦める</td><td class="accent">会話で直す。「もっとやわらかく」と続けて言うだけ</td></tr>
+    </table>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド22: メッセージスライド -->
+<section class="slide message">
+  <div class="message-line">違いはセンスでも、若さでも、<br>パソコンが得意かどうかでもありません。</div>
+  <div class="message-line orange">渡している情報の量です。それだけです。</div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド23: 3回使うまでが山 -->
+<section class="slide">
+  <h1 class="heading">3回使うまでが山</h1>
+  <div class="milestone-row">
+    <div class="milestone">
+      <div class="m-num">1回目</div>
+      <div class="m-desc">たぶん微妙</div>
+    </div>
+    <div class="m-arrow">→</div>
+    <div class="milestone">
+      <div class="m-num">2回目</div>
+      <div class="m-desc">ちょっとコツが見える</div>
+    </div>
+    <div class="m-arrow">→</div>
+    <div class="milestone highlight">
+      <div class="m-num">3回目</div>
+      <div class="m-desc">「あ、これ使える」</div>
+    </div>
+    <div class="m-arrow">→</div>
+    <div class="milestone">
+      <div class="m-num">10回</div>
+      <div class="m-desc">手が勝手に動く</div>
+    </div>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 中扉6 -->
+<section class="slide divider">
+  <div class="num">6</div>
+  <div class="ctitle">実践：全員が<br>1回やってみる</div>
+  <div class="accentbar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 実践: 進め方 -->
+<section class="slide">
+  <h1 class="heading">進め方</h1>
+  <div class="body">
+    <ol class="bullets">
+      <li>（1分）全員AIを開く（ログイン済みの状態から）</li>
+      <li>（1分）配布資料『プロンプト集』から自分の役割のものを1つ選ぶ</li>
+      <li>（5分）コピペして、今日か昨日、実際にやった仕事で試す。詰まったら手を挙げる</li>
+      <li>（3分）うまくいかなかった人を優先して当てる。その場で直す実演</li>
+    </ol>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- 中扉7 -->
+<section class="slide divider">
+  <div class="num">7</div>
+  <div class="ctitle">棚卸し・まとめ</div>
+  <div class="accentbar"></div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド24: 演習シート -->
+<section class="slide">
+  <h1 class="heading">演習シートに2つ書いてください</h1>
+  <div class="body">
+    <ol class="bullets">
+      <li><span style="color:var(--orange);font-weight:700;">「明日、これをAIにやらせる」を1行</span></li>
+      <li><span style="color:var(--orange);font-weight:700;">「毎週やっている、正直めんどくさい作業」トップ3</span>（1回あたり何分・週に何回・使っている道具）</li>
+      <li>シートは回収します（名前は任意）</li>
+    </ol>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド25: 3つの約束 -->
+<section class="slide">
+  <h1 class="heading">3つの約束</h1>
+  <div class="body">
+    <ol class="bullets">
+      <li>お客様の個人情報は入れない</li>
+      <li>数字と法令は必ず自分で確認する</li>
+      <li>まずは下書きに使う</li>
+    </ol>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+<!-- スライド26: 続けるために -->
+<section class="slide">
+  <h1 class="heading">続けるために</h1>
+  <div class="body">
+    <ul class="bullets">
+      <li><strong style="color:var(--orange);">今週中にあと2回</strong>使ってください（3回で変わります）</li>
+      <li>2週間後に30分いただければ、詰まっているところをその場で解消します</li>
+      <li>質問の窓口</li>
+    </ul>
+  </div>
+  <div class="pagenum"></div>
+</section>
+
+</div>
+</div>
+
+<script>
+(function(){
+  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
+  var idx = 0;
+
+  slides.forEach(function(s, i){
+    var pn = s.querySelector('.pagenum');
+    if(pn) pn.textContent = (i+1) + ' / ' + slides.length;
+  });
+
+  function show(n){
+    if(n < 0) n = 0;
+    if(n > slides.length-1) n = slides.length-1;
+    slides[idx].classList.remove('active');
+    idx = n;
+    slides[idx].classList.add('active');
+  }
+
+  function fit(){
+    var stage = document.getElementById('stage');
+    var sw = window.innerWidth, sh = window.innerHeight;
+    var scale = Math.min(sw/1280, sh/720);
+    stage.style.transform = 'scale(' + scale + ')';
+  }
+
+  window.addEventListener('resize', fit);
+  fit();
+
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' '){
+      show(idx+1); e.preventDefault();
+    } else if(e.key === 'ArrowLeft' || e.key === 'PageUp'){
+      show(idx-1); e.preventDefault();
+    } else if(e.key === 'Home'){
+      show(0);
+    } else if(e.key === 'End'){
+      show(slides.length-1);
+    }
+  });
+
+  document.addEventListener('click', function(e){
+    if(e.clientX > window.innerWidth/2){ show(idx+1); } else { show(idx-1); }
+  });
+})();
+</script>
+
+</body>
+</html>

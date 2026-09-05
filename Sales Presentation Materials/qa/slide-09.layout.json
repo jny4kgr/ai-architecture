@@ -1,0 +1,845 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/tijmn2",
+    "id": "tijmn2",
+    "slide": 9,
+    "layoutId": "3096b12a-a4e9-4413-8181-4f064b3e3872",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "48fa73b8-e603-42b2-b1c2-66e7cc6578c7",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#1B1B19",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Arial Unicode MS"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "3096b12a-a4e9-4413-8181-4f064b3e3872",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "48fa73b8-e603-42b2-b1c2-66e7cc6578c7",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "48fa73b8-e603-42b2-b1c2-66e7cc6578c7",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/knmxobqp",
+      "id": "1",
+      "bbox": [
+        44,
+        34,
+        680,
+        22
+      ],
+      "geometry": "rect",
+      "text": "EQUIPMENT 02",
+      "textPreview": "EQUIPMENT 02",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Arial Unicode MS",
+        "color": "#A98F73",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "EQUIPMENT 02"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "EQUIPMENT 02",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Arial Unicode MS",
+            "color": "#A98F73",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "EQUIPMENT 02",
+              "fontSize": 13,
+              "typeface": "Arial Unicode MS",
+              "color": "#A98F73",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jmdwv6pk",
+      "id": "2",
+      "bbox": [
+        44,
+        66,
+        1120,
+        52
+      ],
+      "geometry": "rect",
+      "text": "毎日の所作を整える、洗面と玄関",
+      "textPreview": "毎日の所作を整える、洗面と玄関",
+      "resolvedFontSize": 34,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 34,
+        "typeface": "Arial Unicode MS",
+        "color": "#EEEAE2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "毎日の所作を整える、洗面と玄関"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "毎日の所作を整える、洗面と玄関",
+          "resolvedTextStyle": {
+            "fontSize": 34,
+            "typeface": "Arial Unicode MS",
+            "color": "#EEEAE2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "毎日の所作を整える、洗面と玄関",
+              "fontSize": 34,
+              "typeface": "Arial Unicode MS",
+              "color": "#EEEAE2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/il4fm18z",
+      "id": "3",
+      "bbox": [
+        44,
+        126,
+        1192,
+        1
+      ],
+      "geometry": "rect",
+      "fillColor": "#31302C",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcfe1g7m",
+      "id": "4",
+      "bbox": [
+        44,
+        678,
+        500,
+        18
+      ],
+      "geometry": "rect",
+      "text": "ASAKA HAMAZAKI 3-CHOME / 2",
+      "textPreview": "ASAKA HAMAZAKI 3-CHOME / 2",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ASAKA HAMAZAKI 3-CHOME / 2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ASAKA HAMAZAKI 3-CHOME / 2",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ASAKA HAMAZAKI 3-CHOME / 2",
+              "fontSize": 11,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/sb6xsbq1",
+      "id": "5",
+      "bbox": [
+        1185,
+        676,
+        50,
+        18
+      ],
+      "geometry": "rect",
+      "text": "09",
+      "textPreview": "09",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "09"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "09",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "09",
+              "fontSize": 11,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/ypsjitkv",
+      "id": "6",
+      "bbox": [
+        44,
+        162,
+        570,
+        330
+      ],
+      "alt": "TOTOオクターブLite公式画像",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "asset": {
+        "assetId": "d14053f1-fa78-42eb-b9d5-5c36b8e61947",
+        "contentType": "image/jpeg",
+        "byteLength": 47212
+      }
+    },
+    {
+      "order": 7,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/jq1krylg",
+      "id": "7",
+      "bbox": [
+        666,
+        162,
+        570,
+        330
+      ],
+      "alt": "LIXILジエスタ2公式画像",
+      "contentType": "image/jpeg",
+      "imageFit": "cover",
+      "asset": {
+        "assetId": "a36d8d3c-0433-48c7-b3d6-3cb22464e73d",
+        "contentType": "image/jpeg",
+        "byteLength": 98547
+      }
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/9gbepw72",
+      "id": "8",
+      "bbox": [
+        44,
+        520,
+        140,
+        20
+      ],
+      "geometry": "rect",
+      "text": "WASHROOM",
+      "textPreview": "WASHROOM",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial Unicode MS",
+        "color": "#A98F73",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "WASHROOM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "WASHROOM",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Arial Unicode MS",
+            "color": "#A98F73",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "WASHROOM",
+              "fontSize": 12,
+              "typeface": "Arial Unicode MS",
+              "color": "#A98F73",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8f2dgrqx",
+      "id": "9",
+      "bbox": [
+        44,
+        548,
+        540,
+        30
+      ],
+      "geometry": "rect",
+      "text": "TOTO オクターブLite",
+      "textPreview": "TOTO オクターブLite",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial Unicode MS",
+        "color": "#EEEAE2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TOTO オクターブLite"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TOTO オクターブLite",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial Unicode MS",
+            "color": "#EEEAE2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TOTO オクターブLite",
+              "fontSize": 22,
+              "typeface": "Arial Unicode MS",
+              "color": "#EEEAE2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yd8zilgj",
+      "id": "10",
+      "bbox": [
+        44,
+        586,
+        540,
+        28
+      ],
+      "geometry": "rect",
+      "text": "三面鏡収納・お掃除ラクラク水栓・LED照明",
+      "textPreview": "三面鏡収納・お掃除ラクラク水栓・LED照明",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "三面鏡収納・お掃除ラクラク水栓・LED照明"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "三面鏡収納・お掃除ラクラク水栓・LED照明",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "三面鏡収納・お掃除ラクラク水栓・LED照明",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/jeh0bqx4",
+      "id": "11",
+      "bbox": [
+        666,
+        520,
+        130,
+        20
+      ],
+      "geometry": "rect",
+      "text": "ENTRANCE",
+      "textPreview": "ENTRANCE",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Arial Unicode MS",
+        "color": "#A98F73",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ENTRANCE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ENTRANCE",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Arial Unicode MS",
+            "color": "#A98F73",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ENTRANCE",
+              "fontSize": 12,
+              "typeface": "Arial Unicode MS",
+              "color": "#A98F73",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kfqhkvyp",
+      "id": "12",
+      "bbox": [
+        666,
+        548,
+        540,
+        30
+      ],
+      "geometry": "rect",
+      "text": "LIXIL ジエスタ2",
+      "textPreview": "LIXIL ジエスタ2",
+      "resolvedFontSize": 22,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 22,
+        "typeface": "Arial Unicode MS",
+        "color": "#EEEAE2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "LIXIL ジエスタ2"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "LIXIL ジエスタ2",
+          "resolvedTextStyle": {
+            "fontSize": 22,
+            "typeface": "Arial Unicode MS",
+            "color": "#EEEAE2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "LIXIL ジエスタ2",
+              "fontSize": 22,
+              "typeface": "Arial Unicode MS",
+              "color": "#EEEAE2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lgzid0fa",
+      "id": "13",
+      "bbox": [
+        666,
+        586,
+        540,
+        28
+      ],
+      "geometry": "rect",
+      "text": "断熱玄関ドア・電池錠・シリンダー一体型ハンドル",
+      "textPreview": "断熱玄関ドア・電池錠・シリンダー一体型ハンドル",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "断熱玄関ドア・電池錠・シリンダー一体型ハンドル"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "断熱玄関ドア・電池錠・シリンダー一体型ハンドル",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "断熱玄関ドア・電池錠・シリンダー一体型ハンドル",
+              "fontSize": 15,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/618zm5gv",
+      "id": "14",
+      "bbox": [
+        44,
+        642,
+        1160,
+        24
+      ],
+      "geometry": "rect",
+      "text": "※掲載写真はメーカー公式の代表イメージ。実際の品番・色・仕様は仕様書を優先します。",
+      "textPreview": "※掲載写真はメーカー公式の代表イメージ。実際の品番・色・仕様は仕様書を優先します。",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Arial Unicode MS",
+        "color": "#A9A59E",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "insets": {
+          "top": 4.8,
+          "right": 9.6,
+          "bottom": 4.8,
+          "left": 9.6
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "※掲載写真はメーカー公式の代表イメージ。実際の品番・色・仕様は仕様書を優先します。"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "※掲載写真はメーカー公式の代表イメージ。実際の品番・色・仕様は仕様書を優先します。",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Arial Unicode MS",
+            "color": "#A9A59E",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "※掲載写真はメーカー公式の代表イメージ。実際の品番・色・仕様は仕様書を優先します。",
+              "fontSize": 11,
+              "typeface": "Arial Unicode MS",
+              "color": "#A9A59E",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

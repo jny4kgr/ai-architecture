@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>業務フローmap</title>
+<script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/reactflow@11/dist/umd/index.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/reactflow@11/dist/style.css">
+<script src="./data.js"></script>
+<style>
+  :root{--bg:#1e1f24;--panel:#26272d;--line:#3a3b42;--fg:#e8e8ea;--dim:#9a9ba3;--work:#4a7bd0;--money:#3fb46f;--ext:#c2783c;--warn:#e0b341}
+  html,body{margin:0;height:100%;background:var(--bg);color:var(--fg);font-family:-apple-system,"Hiragino Sans",sans-serif;font-size:13px}
+  #app{display:grid;grid-template-columns:1fr 340px;grid-template-rows:48px 1fr;height:100vh}
+  header{grid-column:1/3;display:flex;align-items:center;gap:16px;padding:0 16px;background:var(--panel);border-bottom:1px solid var(--line)}
+  header h1{font-size:15px;margin:0;font-weight:600}
+  header .stat{color:var(--dim)} header .stat b{color:var(--fg);font-weight:600}
+  header .sp{flex:1} header button,header label{background:#33343b;border:1px solid var(--line);color:var(--fg);padding:5px 10px;border-radius:6px;cursor:pointer;font-size:12px}
+  aside{background:var(--panel);border-left:1px solid var(--line);padding:16px;overflow:auto}
+  aside h2{font-size:14px;margin:0 0 4px} aside .sub{color:var(--dim);margin-bottom:12px}
+  aside dl{display:grid;grid-template-columns:88px 1fr;gap:6px 10px;margin:0} aside dt{color:var(--dim)} aside dd{margin:0;word-break:break-all}
+  aside .empty{color:var(--dim)} .star{color:var(--warn)}
+  .node{min-width:170px;max-width:190px;background:#2c2d34;border:1.5px solid var(--work);border-radius:8px;padding:8px 10px;box-shadow:0 2px 8px #0006}
+  .node.money{border-color:var(--money);background:#22312a} .node.ext{border-color:var(--ext)} .node.selected{outline:2px solid #fff} .node.assumed{border-style:dashed} .tag{display:inline-block;font-size:10px;color:var(--dim);border:1px solid var(--line);border-radius:3px;padding:0 4px;margin-left:4px;vertical-align:middle}
+  .node .nm{font-weight:600;line-height:1.3;margin-bottom:4px} .node .meta{color:var(--dim);font-size:11px;line-height:1.4}
+  .node .cost{margin-top:4px;font-size:11px} .node .cost.ext{color:var(--ext)} .node .cost.money{color:var(--money);font-weight:600}
+  .lane{background:#ffffff08;border-top:1px solid var(--line);color:var(--dim);font-size:12px;padding:6px 10px;pointer-events:none}
+  .lane.ext{background:#c2783c10} .block{color:var(--dim);font-size:12px;border-bottom:1px solid var(--line);padding:0 0 4px;pointer-events:none}
+  .react-flow__edge-path{stroke:#8a8b93;stroke-width:1.5} .react-flow__edge-text{fill:var(--fg);font-size:11px} .react-flow__edge-textbg{fill:var(--bg)}
+  .react-flow__attribution{display:none}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script>
+const {useState,useMemo,useCallback,createElement:h} = React;
+const RF = window.ReactFlow; const {default:ReactFlow,Background,Controls,MiniMap,Handle,Position,applyNodeChanges,MarkerType} = RF;
+
+const LANE_H = 150, COL_W = 230, LEFT = 220, TOP = 60;
+const yen = n => n==null?"":"¥"+Number(n).toLocaleString();
+const labor = (d,hourly)=> Math.round((d.minutes||0)*(d.freq||0)/60*hourly);
+
+function WorkNode({data,selected}){
+  const d=data.raw, cls = "node"+(d.type==="money_in"?" money":d.external?" ext":"")+(selected?" selected":"")+(d.assumed?" assumed":"");
+  const star = (d.unknown&&d.unknown.length)? h("span",{className:"star"}," ★"):null;
+  return h("div",{className:cls},
+    h(Handle,{type:"target",position:Position.Left}),
+    h("div",{className:"nm"},d.name,star,d.assumed?h("span",{className:"tag"},"想定"):null),
+    d.type==="money_in"
+      ? h("div",{className:"cost money"},`入金 ${d.money_in.amount}`,h("div",{className:"meta"},d.money_in.condition))
+      : h("div",{className:"meta"},`${d.tool||"—"}　${d.minutes||0}分×${d.freq||0}回`),
+    d.type!=="money_in" && d.labor>0 ? h("div",{className:"cost"},`人件費 ${yen(d.labor)}`):null,
+    d.external_cost ? h("div",{className:"cost ext"},`外払 ${yen(d.external_cost.amount)}`):null,
+    d.wait ? h("div",{className:"meta"},"⏳ "+d.wait):null,
+    h(Handle,{type:"source",position:Position.Right}));
+}
+const LaneNode = ({data})=>h("div",{className:"lane"+(data.external?" ext":""),style:{width:data.w,height:LANE_H}},data.name);
+const BlockNode = ({data})=>h("div",{className:"block",style:{width:data.w}},data.name);
+const nodeTypes={work:WorkNode,lane:LaneNode,block:BlockNode};
+
+function build(D){
+  const laneIdx=Object.fromEntries(D.lanes.map((l,i)=>[l.id,i]));
+  const extLane=new Set(D.lanes.filter(l=>l.external).map(l=>l.id));
+  const blockOrder=Object.fromEntries(D.blocks.map((b,i)=>[b.id,i]));
+  // column = order within array, grouped by block order
+  const sorted=[...D.nodes].sort((a,b)=>blockOrder[a.block]-blockOrder[b.block]);
+  const col={}; sorted.forEach((n,i)=>col[n.id]=i);
+  const totalW=LEFT+sorted.length*COL_W+40;
+  const nodes=[];
+  D.lanes.forEach((l,i)=>nodes.push({id:"lane-"+l.id,type:"lane",position:{x:0,y:TOP+i*LANE_H},data:{name:l.name,external:l.external,w:totalW},draggable:false,selectable:false,zIndex:-1}));
+  // block headers span their columns
+  D.blocks.forEach(b=>{const cs=sorted.filter(n=>n.block===b.id).map(n=>col[n.id]); if(!cs.length)return;
+    nodes.push({id:"block-"+b.id,type:"block",position:{x:LEFT+Math.min(...cs)*COL_W,y:TOP-36},data:{name:b.name,w:(Math.max(...cs)-Math.min(...cs)+1)*COL_W-30},draggable:false,selectable:false});});
+  D.nodes.forEach(n=>{const raw={...n,external:extLane.has(n.lane),labor:labor(n,D.meta.hourly)};
+    nodes.push({id:n.id,type:"work",position:n.position||{x:LEFT+col[n.id]*COL_W,y:TOP+laneIdx[n.lane]*LANE_H+35},data:{raw}});});
+  const edges=D.edges.map((e,i)=>({id:"e"+i,source:e.from,target:e.to,label:e.label,type:"smoothstep",markerEnd:{type:MarkerType.ArrowClosed,color:"#8a8b93"}}));
+  return {nodes,edges};
+}
+
+function Panel({n,hourly}){
+  if(!n) return h("aside",null,h("div",{className:"empty"},"ノードをクリックすると詳細が出ます。",h("br"),h("br"),"青＝社内作業 / 橙＝社外 / 緑＝入金",h("br"),"★＝未確認項目あり / 点線＝想定"));
+  const d=n.data.raw, U=new Set(d.unknown||[]);
+  const row=(k,label,v)=>[h("dt",{key:k+"t"},label),h("dd",{key:k+"d"},U.has(k)?h("span",{className:"star"},"★未確認"):(v||h("span",{className:"empty"},"—")))];
+  const rows = d.type==="money_in"
+    ? [row("amount","金額/率",d.money_in.amount),row("from","誰から",d.money_in.from),row("cond","発生条件",d.money_in.condition),row("wait","待ち",d.wait),row("note","根拠/備考",d.note)]
+    : [row("trigger","引き金",d.trigger),row("tool","使う道具",d.tool),row("input","受け取る",d.input),row("output","渡す",d.output),
+       row("minutes","所要",d.minutes!=null?d.minutes+"分":null),row("freq","頻度",d.freq!=null?"案件あたり"+d.freq+"回":null),
+       row("labor","人件費",yen(d.labor)+`（時給${hourly}円換算）`),row("wait","待ち",d.wait),row("redo","やり直し",d.redo),
+       row("ext","社外に払う金",d.external_cost?`${yen(d.external_cost.amount)} / ${d.external_cost.to} / ${d.external_cost.item}`:null),row("note","根拠/備考",d.note)];
+  return h("aside",null,h("h2",null,d.name),h("div",{className:"sub"},`${d.laneName} ／ ${d.blockName}`),h("dl",null,...rows.flat()));
+}
+
+function App(){
+  const [D,setD]=useState(window.FLOW_DATA);
+  const init=useMemo(()=>build(D),[D]);
+  const [nodes,setNodes]=useState(init.nodes); const [sel,setSel]=useState(null);
+  React.useEffect(()=>{setNodes(init.nodes);setSel(null)},[init]);
+  const onNodesChange=useCallback(ch=>setNodes(ns=>applyNodeChanges(ch,ns)),[]);
+  const laneName=Object.fromEntries(D.lanes.map(l=>[l.id,l.name])), blockName=Object.fromEntries(D.blocks.map(b=>[b.id,b.name]));
+  const selNode = sel? {...sel,data:{raw:{...sel.data.raw,laneName:laneName[sel.data.raw.lane],blockName:blockName[sel.data.raw.block]}}}:null;
+  const tLabor=D.nodes.reduce((s,n)=>s+labor(n,D.meta.hourly),0), tExt=D.nodes.reduce((s,n)=>s+(n.external_cost?n.external_cost.amount:0),0);
+  const unknown=D.nodes.filter(n=>n.unknown&&n.unknown.length).length, assumed=D.nodes.filter(n=>n.assumed).length;
+  const exportJson=()=>{const pos=Object.fromEntries(nodes.filter(n=>n.type==="work").map(n=>[n.id,n.position]));
+    const out={...D,nodes:D.nodes.map(n=>({...n,position:pos[n.id]}))};
+    const blob=new Blob(["window.FLOW_DATA = "+JSON.stringify(out,null,2)+";\n"],{type:"text/javascript"});
+    const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="data.js";a.click();};
+  const load=e=>{const f=e.target.files[0]; if(!f)return; f.text().then(t=>{const m=t.match(/=\s*([\s\S]*?);?\s*$/); setD(JSON.parse(m?m[1]:t));});};
+  return h("div",{id:"app"},
+    h("header",null,h("h1",null,`${D.meta.company}　${D.meta.line}`),
+      h("span",{className:"stat"},"人件費/案件 ",h("b",null,yen(tLabor))),h("span",{className:"stat"},"社外払い/案件 ",h("b",null,yen(tExt))),
+      h("span",{className:"stat"},"★未確認 ",h("b",null,unknown+"件")),h("span",{className:"stat"},"想定 ",h("b",null,`${assumed}/${D.nodes.length}`)),h("span",{className:"sp"}),
+      h("label",null,"data.js を読む",h("input",{type:"file",accept:".js,.json",style:{display:"none"},onChange:load})),h("button",{onClick:exportJson},"配置を保存（data.js書き出し）")),
+    h(ReactFlow,{nodes,edges:init.edges,nodeTypes,onNodesChange,onNodeClick:(_,n)=>n.type==="work"&&setSel(n),onPaneClick:()=>setSel(null),fitView:true,minZoom:0.2,proOptions:{hideAttribution:true}},
+      h(Background,{color:"#333",gap:24}),h(Controls),h(MiniMap,{pannable:true,nodeColor:n=>n.type==="work"?(n.data.raw.type==="money_in"?"#3fb46f":"#4a7bd0"):"#0000"})),
+    h(Panel,{n:selNode,hourly:D.meta.hourly}));
+}
+ReactDOM.createRoot(document.getElementById("app")).render(h(App));
+</script>
+</body>
+</html>

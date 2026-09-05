@@ -1,0 +1,241 @@
+{"kind":"deck","id":"pr/zkd2j7","name":"Deck"}
+{"kind":"layout","layoutId":"48fa73b8-e603-42b2-b1c2-66e7cc6578c7","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"3096b12a-a4e9-4413-8181-4f064b3e3872","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/kiju1b","slide":1,"title":"PRIVATE RESIDENCE","textShapes":5}
+{"kind":"shape","id":"sh/7694ful0","slide":1,"bbox":[0,0,620,720]}
+{"kind":"shape","id":"sh/m50n6pkf","slide":1,"bbox":[515,0,190,720]}
+{"kind":"textbox","id":"sh/hcb6l432","slide":1,"text":"PRIVATE RESIDENCE","textPreview":"PRIVATE RESIDENCE","textChars":17,"textLines":1,"bbox":[44,44,420,24]}
+{"kind":"textbox","id":"sh/gb25cz2h","slide":1,"text":"朝霞市浜崎三丁目\n二号棟","textPreview":"朝霞市浜崎三丁目 | 二号棟","textChars":12,"textLines":2,"bbox":[44,188,500,142]}
+{"kind":"textbox","id":"sh/vatojulw","slide":1,"text":"都市の利便と、静かな家時間。\n三層に整えた、端正な住まい。","textPreview":"都市の利便と、静かな家時間。 | 三層に整えた、端正な住まい。","textChars":29,"textLines":2,"bbox":[44,390,445,78]}
+{"kind":"shape","id":"sh/u9knapkr","slide":1,"bbox":[44,515,400,2]}
+{"kind":"textbox","id":"sh/xgrm903y","slide":1,"text":"NEW HOME PRESENTATION  /  2026","textPreview":"NEW HOME PRESENTATION  /  2026","textChars":30,"textLines":1,"bbox":[44,540,420,24]}
+{"kind":"textbox","id":"sh/cfy5gv2d","slide":1,"text":"完成イメージ","textPreview":"完成イメージ","textChars":6,"textLines":1,"bbox":[1060,680,170,18]}
+{"kind":"image","id":"im/1s7a50jq","slide":1,"name":"","alt":"外観完成イメージ","bbox":[515,0,765,720]}
+{"kind":"notes","id":"nt/kiju1b","slide":1,"text":""}
+{"kind":"slide","id":"sl/6c03y7","slide":2,"title":"THREE VALUES","textShapes":14}
+{"kind":"textbox","id":"sh/gfixcjed","slide":2,"text":"THREE VALUES","textPreview":"THREE VALUES","textChars":12,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/fe9g3exs","slide":2,"text":"この家の魅力、3点","textPreview":"この家の魅力、3点","textChars":9,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/ud0fa9w7","slide":2,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/p4by9ofu","slide":2,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/43ixgje9","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"textbox","id":"sh/3i9g7exo","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[44,180,80,42]}
+{"kind":"shape","id":"sh/2h0fe9w3","slide":2,"bbox":[44,240,340,2]}
+{"kind":"textbox","id":"sh/587yxkfq","slide":2,"text":"17帖の2階LDK","textPreview":"17帖の2階LDK","textChars":9,"textLines":1,"bbox":[44,275,340,58]}
+{"kind":"textbox","id":"sh/k7yx4ze5","slide":2,"text":"視線の抜けと採光を得やすい2階に、料理・食事・団らんをひとつに集約。","textPreview":"視線の抜けと採光を得やすい2階に、料理・食事・団らんをひとつに集約。","textChars":34,"textLines":1,"bbox":[44,357,340,115]}
+{"kind":"textbox","id":"sh/apof6xsn","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[446,180,80,42]}
+{"kind":"shape","id":"sh/vqhwf2t8","slide":2,"bbox":[446,240,340,2]}
+{"kind":"textbox","id":"sh/wrqx87at","slide":2,"text":"収納を受け止める1階","textPreview":"収納を受け止める1階","textChars":10,"textLines":1,"bbox":[446,275,340,58]}
+{"kind":"textbox","id":"sh/xszehcby","slide":2,"text":"6帖納戸、玄関収納、階段下収納。外で使う物も、日用品も整理しやすく。","textPreview":"6帖納戸、玄関収納、階段下収納。外で使う物も、日用品も整理しやすく。","textChars":34,"textLines":1,"bbox":[446,357,340,115]}
+{"kind":"textbox","id":"sh/id8fahsj","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[848,180,80,42]}
+{"kind":"shape","id":"sh/jehwj2t4","slide":2,"bbox":[848,240,340,2]}
+{"kind":"textbox","id":"sh/kfqxc7ap","slide":2,"text":"三層を使い分ける","textPreview":"三層を使い分ける","textChars":8,"textLines":1,"bbox":[848,275,340,58]}
+{"kind":"textbox","id":"sh/5gzelcba","slide":2,"text":"1階は帰宅、2階は家族、3階は休息。生活の場面が自然に切り替わります。","textPreview":"1階は帰宅、2階は家族、3階は休息。生活の場面が自然に切り替わります。","textChars":35,"textLines":1,"bbox":[848,357,340,115]}
+{"kind":"textbox","id":"sh/6hsfehsv","slide":2,"text":"BUILT-IN GARAGE  /  3 STOREYS  /  2F FAMILY LIVING","textPreview":"BUILT-IN GARAGE  /  3 STOREYS  /  2F FAMILY LIVING","textChars":50,"textLines":1,"bbox":[44,604,900,25]}
+{"kind":"notes","id":"nt/6c03y7","slide":2,"text":""}
+{"kind":"slide","id":"sl/aqvhb8","slide":3,"title":"EXTERIOR","textShapes":10}
+{"kind":"shape","id":"sh/fal4fahk","slide":3,"bbox":[760,0,520,720]}
+{"kind":"textbox","id":"sh/e9cn6pgz","slide":3,"text":"EXTERIOR","textPreview":"EXTERIOR","textChars":8,"textLines":1,"bbox":[910,52,250,24]}
+{"kind":"textbox","id":"sh/d83mdkze","slide":3,"text":"陰影で魅せる、\nグレーの立面。","textPreview":"陰影で魅せる、 | グレーの立面。","textChars":15,"textLines":2,"bbox":[910,132,320,112]}
+{"kind":"textbox","id":"sh/s7u54fyt","slide":3,"text":"リープMGグレーを軸に、白と木目を控えめに重ねた外装。ブラックのサッシと屋根が輪郭を整えます。","textPreview":"リープMGグレーを軸に、白と木目を控えめに重ねた外装。ブラックのサッシと屋根が輪郭を整えます。","textChars":47,"textLines":1,"bbox":[910,292,300,110]}
+{"kind":"shape","id":"sh/r6l4bah8","slide":3,"bbox":[910,440,270,2]}
+{"kind":"textbox","id":"sh/q5s325gn","slide":3,"text":"MAIN","textPreview":"MAIN","textChars":4,"textLines":1,"bbox":[910,468,70,20]}
+{"kind":"textbox","id":"sh/x4nmp4zi","slide":3,"text":"リープMGグレー","textPreview":"リープMGグレー","textChars":8,"textLines":1,"bbox":[995,464,220,27]}
+{"kind":"textbox","id":"sh/c3e5gzyx","slide":3,"text":"ACCENT","textPreview":"ACCENT","textChars":6,"textLines":1,"bbox":[910,518,70,20]}
+{"kind":"textbox","id":"sh/qdgfil0b","slide":3,"text":"ヴィンテージウッド","textPreview":"ヴィンテージウッド","textChars":9,"textLines":1,"bbox":[995,514,220,27]}
+{"kind":"textbox","id":"sh/bepwrqhw","slide":3,"text":"※図面・仕様を基に作成した完成イメージ","textPreview":"※図面・仕様を基に作成した完成イメージ","textChars":19,"textLines":1,"bbox":[910,650,290,18]}
+{"kind":"textbox","id":"sh/cfyxkvih","slide":3,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/dg7et0z2","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"image","id":"im/l07ylsz2","slide":3,"name":"","alt":"外観完成イメージ","bbox":[0,0,850,720]}
+{"kind":"notes","id":"nt/aqvhb8","slide":3,"text":""}
+{"kind":"slide","id":"sl/4fwgja","slide":4,"title":"SECOND FLOOR","textShapes":7}
+{"kind":"shape","id":"sh/ehgrat0f","slide":4,"bbox":[0,0,510,720]}
+{"kind":"shape","id":"sh/fipsjehk","slide":4,"bbox":[430,0,150,720]}
+{"kind":"textbox","id":"sh/sfy98ji9","slide":4,"text":"SECOND FLOOR","textPreview":"SECOND FLOOR","textChars":12,"textLines":1,"bbox":[44,50,300,22]}
+{"kind":"textbox","id":"sh/dg7ahozu","slide":4,"text":"17帖。\n家族の時間を\n明るくつなぐ。","textPreview":"17帖。 | 家族の時間を | 明るくつなぐ。","textChars":19,"textLines":3,"bbox":[44,132,420,190]}
+{"kind":"textbox","id":"sh/qtwr6903","slide":4,"text":"フラット対面キッチンを中心に、リビング・ダイニングと水まわりを同じ階へ。家事の移動を短く整えます。","textPreview":"フラット対面キッチンを中心に、リビング・ダイニングと水まわりを同じ階へ。家事の移動を短く整えます。","textChars":49,"textLines":1,"bbox":[44,378,350,110]}
+{"kind":"textbox","id":"sh/re58feho","slide":4,"text":"17.0 J","textPreview":"17.0 J","textChars":6,"textLines":1,"bbox":[44,560,180,45]}
+{"kind":"textbox","id":"sh/cbi9k3yd","slide":4,"text":"LIVING / DINING / KITCHEN","textPreview":"LIVING / DINING / KITCHEN","textChars":25,"textLines":1,"bbox":[44,610,300,22]}
+{"kind":"textbox","id":"sh/xcrat8zy","slide":4,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/xgj6tw36","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"image","id":"im/c7u98zql","slide":4,"name":"","alt":"LDK完成イメージ","bbox":[430,0,850,720]}
+{"kind":"notes","id":"nt/4fwgja","slide":4,"text":""}
+{"kind":"slide","id":"sl/wz17wo","slide":5,"title":"FLOOR PLAN 01","textShapes":13}
+{"kind":"textbox","id":"sh/zypc3il0","slide":5,"text":"FLOOR PLAN 01","textPreview":"FLOOR PLAN 01","textChars":13,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/0zytcn2l","slide":5,"text":"1階｜収納と帰宅動線","textPreview":"1階｜収納と帰宅動線","textChars":10,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/107u5836","slide":5,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/m10vedkr","slide":5,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/n29c7ilc","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"shape","id":"sh/94ru9s32","slide":5,"bbox":[600,325,30,30]}
+{"kind":"textbox","id":"sh/ap0vixkn","slide":5,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[600,330,30,18]}
+{"kind":"shape","id":"sh/vq9cb2l8","slide":5,"bbox":[530,440,30,30]}
+{"kind":"textbox","id":"sh/vax0b6pw","slide":5,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[530,445,30,18]}
+{"kind":"shape","id":"sh/u9oz21ob","slide":5,"bbox":[285,465,30,30]}
+{"kind":"textbox","id":"sh/hwfidw72","slide":5,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[285,470,30,18]}
+{"kind":"textbox","id":"sh/gb6h4r6h","slide":5,"text":"01  6帖納戸","textPreview":"01  6帖納戸","textChars":8,"textLines":1,"bbox":[830,168,360,28]}
+{"kind":"textbox","id":"sh/76xg7mp0","slide":5,"text":"季節物や趣味用品まで受け止める、独立した収納空間。","textPreview":"季節物や趣味用品まで受け止める、独立した収納空間。","textChars":25,"textLines":1,"bbox":[830,201,360,58]}
+{"kind":"textbox","id":"sh/65ozyhof","slide":5,"text":"02  帰宅動線","textPreview":"02  帰宅動線","textChars":8,"textLines":1,"bbox":[830,323,360,28]}
+{"kind":"textbox","id":"sh/t8fi9w7q","slide":5,"text":"ガレージから玄関、収納、階段へ。持ち物を整理して上階へ。","textPreview":"ガレージから玄関、収納、階段へ。持ち物を整理して上階へ。","textChars":28,"textLines":1,"bbox":[830,356,360,58]}
+{"kind":"textbox","id":"sh/876h0r6l","slide":5,"text":"03  階段下収納","textPreview":"03  階段下収納","textChars":9,"textLines":1,"bbox":[830,478,360,28]}
+{"kind":"textbox","id":"sh/r2h0jqp4","slide":5,"text":"日用品や掃除道具の定位置を確保。生活空間へ物を持ち込みにくく。","textPreview":"日用品や掃除道具の定位置を確保。生活空間へ物を持ち込みにくく。","textChars":31,"textLines":1,"bbox":[830,511,360,58]}
+{"kind":"image","id":"im/lcbm9kjq","slide":5,"name":"","alt":"1階平面図","bbox":[44,155,710,485]}
+{"kind":"notes","id":"nt/wz17wo","slide":5,"text":""}
+{"kind":"slide","id":"sl/nxxuw8","slide":6,"title":"FLOOR PLAN 02","textShapes":13}
+{"kind":"textbox","id":"sh/o32lknit","slide":6,"text":"FLOOR PLAN 02","textPreview":"FLOOR PLAN 02","textChars":13,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/nitkri18","slide":6,"text":"2階｜採光と家事動線","textPreview":"2階｜採光と家事動線","textChars":10,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/mhk3ix03","slide":6,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/1gb2psji","slide":6,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/0f2lgnix","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"shape","id":"sh/ed0jed0r","slide":6,"bbox":[285,250,30,30]}
+{"kind":"textbox","id":"sh/lcvm1czm","slide":6,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[285,255,30,18]}
+{"kind":"shape","id":"sh/kbmls7i1","slide":6,"bbox":[520,377,30,30]}
+{"kind":"textbox","id":"sh/elgfilwf","slide":6,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[520,382,30,18]}
+{"kind":"shape","id":"sh/fmpwrqd0","slide":6,"bbox":[625,240,30,30]}
+{"kind":"textbox","id":"sh/gnyxkvel","slide":6,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[625,245,30,18]}
+{"kind":"textbox","id":"sh/1o7yt0v6","slide":6,"text":"01  採光の中心","textPreview":"01  採光の中心","textChars":9,"textLines":1,"bbox":[830,168,360,28]}
+{"kind":"textbox","id":"sh/6hwfelwj","slide":6,"text":"バルコニー側の開口からLDKへ光を取り込む計画。","textPreview":"バルコニー側の開口からLDKへ光を取り込む計画。","textChars":24,"textLines":1,"bbox":[830,201,360,58]}
+{"kind":"textbox","id":"sh/ripwnqd4","slide":6,"text":"02  家事を一層で完結","textPreview":"02  家事を一層で完結","textChars":12,"textLines":1,"bbox":[830,323,360,28]}
+{"kind":"textbox","id":"sh/sjyxgvep","slide":6,"text":"キッチン、洗面、浴室を同じ階にまとめ、上下移動を抑制。","textPreview":"キッチン、洗面、浴室を同じ階にまとめ、上下移動を抑制。","textChars":27,"textLines":1,"bbox":[830,356,360,58]}
+{"kind":"textbox","id":"sh/tk7epgvu","slide":6,"text":"03  フラット対面","textPreview":"03  フラット対面","textChars":10,"textLines":1,"bbox":[830,478,360,28]}
+{"kind":"textbox","id":"sh/qd0fq5wn","slide":6,"text":"料理中もリビング・ダイニングを見渡しやすい配置。","textPreview":"料理中もリビング・ダイニングを見渡しやすい配置。","textChars":24,"textLines":1,"bbox":[830,511,360,58]}
+{"kind":"image","id":"im/610ny5g3","slide":6,"name":"","alt":"2階平面図","bbox":[44,155,710,485]}
+{"kind":"notes","id":"nt/nxxuw8","slide":6,"text":""}
+{"kind":"slide","id":"sl/sm8ckd","slide":7,"title":"FLOOR PLAN 03","textShapes":13}
+{"kind":"textbox","id":"sh/4n2t0jel","slide":7,"text":"FLOOR PLAN 03","textPreview":"FLOOR PLAN 03","textChars":13,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/jm9s7ex0","slide":7,"text":"3階｜個室・収納・光","textPreview":"3階｜個室・収納・光","textChars":10,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/il0by9wf","slide":7,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/hkra54fu","slide":7,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/wjitwje9","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"shape","id":"sh/uh0bu9wj","slide":7,"bbox":[250,330,30,30]}
+{"kind":"textbox","id":"sh/9gra14fy","slide":7,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[250,335,30,18]}
+{"kind":"shape","id":"sh/8vytszed","slide":7,"bbox":[520,255,30,30]}
+{"kind":"textbox","id":"sh/ehwfm1w7","slide":7,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[520,260,30,18]}
+{"kind":"shape","id":"sh/fi5wf6dc","slide":7,"bbox":[610,420,30,30]}
+{"kind":"textbox","id":"sh/gjexobex","slide":7,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[610,425,30,18]}
+{"kind":"textbox","id":"sh/1knehgvi","slide":7,"text":"01  3つの個室","textPreview":"01  3つの個室","textChars":9,"textLines":1,"bbox":[830,168,360,28]}
+{"kind":"textbox","id":"sh/6dcfihwv","slide":7,"text":"6帖・5帖・4.5帖。家族それぞれの時間を確保。","textPreview":"6帖・5帖・4.5帖。家族それぞれの時間を確保。","textChars":24,"textLines":1,"bbox":[830,201,360,58]}
+{"kind":"textbox","id":"sh/relwbmdg","slide":7,"text":"02  各室収納","textPreview":"02  各室収納","textChars":8,"textLines":1,"bbox":[830,323,360,28]}
+{"kind":"textbox","id":"sh/sfuxkre1","slide":7,"text":"居室ごとに収納を設け、床面をすっきり使いやすく。","textPreview":"居室ごとに収納を設け、床面をすっきり使いやすく。","textChars":24,"textLines":1,"bbox":[830,356,360,58]}
+{"kind":"textbox","id":"sh/tgnedwvm","slide":7,"text":"03  2面バルコニー","textPreview":"03  2面バルコニー","textChars":11,"textLines":1,"bbox":[830,478,360,28]}
+{"kind":"textbox","id":"sh/ipcvehwz","slide":7,"text":"外への抜けを複数方向に設け、採光と通風に配慮。","textPreview":"外への抜けを複数方向に設け、採光と通風に配慮。","textChars":23,"textLines":1,"bbox":[830,511,360,58]}
+{"kind":"image","id":"im/ud8v2pwb","slide":7,"name":"","alt":"3階平面図","bbox":[44,155,710,485]}
+{"kind":"notes","id":"nt/sm8ckd","slide":7,"text":""}
+{"kind":"slide","id":"sl/k9dczl","slide":8,"title":"EQUIPMENT 01","textShapes":11}
+{"kind":"textbox","id":"sh/b2xkjadc","slide":8,"text":"EQUIPMENT 01","textPreview":"EQUIPMENT 01","textChars":12,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/w361cfex","slide":8,"text":"キッチンと浴室を、写真で確かめる","textPreview":"キッチンと浴室を、写真で確かめる","textChars":16,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/x4f2lkvi","slide":8,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/mx4j65wv","slide":8,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/nyx0fqdg","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"textbox","id":"sh/e94j2lwz","slide":8,"text":"KITCHEN","textPreview":"KITCHEN","textChars":7,"textLines":1,"bbox":[44,520,130,20]}
+{"kind":"textbox","id":"sh/zud0bqd4","slide":8,"text":"クリナップ KT｜フラット対面","textPreview":"クリナップ KT｜フラット対面","textChars":15,"textLines":1,"bbox":[44,548,540,30]}
+{"kind":"textbox","id":"sh/z6x0naps","slide":8,"text":"ダークウッド扉 × ライトグレー天板（仕様書記載）","textPreview":"ダークウッド扉 × ライトグレー天板（仕様書記載）","textChars":25,"textLines":1,"bbox":[44,586,540,28]}
+{"kind":"textbox","id":"sh/y5ozu587","slide":8,"text":"BATHROOM","textPreview":"BATHROOM","textChars":8,"textLines":1,"bbox":[666,520,150,20]}
+{"kind":"textbox","id":"sh/l8fip07y","slide":8,"text":"TOTO サザナ｜1616","textPreview":"TOTO サザナ｜1616","textChars":13,"textLines":1,"bbox":[666,548,540,30]}
+{"kind":"textbox","id":"sh/k76hwvqd","slide":8,"text":"浴室換気暖房乾燥機・追焚き・ランドリーパイプ","textPreview":"浴室換気暖房乾燥機・追焚き・ランドリーパイプ","textChars":22,"textLines":1,"bbox":[666,586,540,28]}
+{"kind":"textbox","id":"sh/7ax0rapo","slide":8,"text":"※キッチン画像はクリナップ公式のフラット対面レイアウト参考。実際の商品・色柄は仕様書および現物サンプルを優先します。","textPreview":"※キッチン画像はクリナップ公式のフラット対面レイアウト参考。実際の商品・色柄は仕様書および現物サンプルを優先します。","textChars":58,"textLines":1,"bbox":[44,642,1160,24]}
+{"kind":"image","id":"im/5crulwf2","slide":8,"name":"","alt":"クリナップ公式フラット対面参考画像","bbox":[44,162,570,330]}
+{"kind":"image","id":"im/kbitsreh","slide":8,"name":"","alt":"TOTOサザナ公式画像","bbox":[666,162,570,330]}
+{"kind":"notes","id":"nt/k9dczl","slide":8,"text":""}
+{"kind":"slide","id":"sl/tijmn2","slide":9,"title":"EQUIPMENT 02","textShapes":11}
+{"kind":"textbox","id":"sh/knmxobqp","slide":9,"text":"EQUIPMENT 02","textPreview":"EQUIPMENT 02","textChars":12,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/jmdwv6pk","slide":9,"text":"毎日の所作を整える、洗面と玄関","textPreview":"毎日の所作を整える、洗面と玄関","textChars":15,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/il4fm18z","slide":9,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/tcfe1g7m","slide":9,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/sb6xsbq1","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"textbox","id":"sh/9gbepw72","slide":9,"text":"WASHROOM","textPreview":"WASHROOM","textChars":8,"textLines":1,"bbox":[44,520,140,20]}
+{"kind":"textbox","id":"sh/8f2dgrqx","slide":9,"text":"TOTO オクターブLite","textPreview":"TOTO オクターブLite","textChars":14,"textLines":1,"bbox":[44,548,540,30]}
+{"kind":"textbox","id":"sh/yd8zilgj","slide":9,"text":"三面鏡収納・お掃除ラクラク水栓・LED照明","textPreview":"三面鏡収納・お掃除ラクラク水栓・LED照明","textChars":21,"textLines":1,"bbox":[44,586,540,28]}
+{"kind":"textbox","id":"sh/jeh0bqx4","slide":9,"text":"ENTRANCE","textPreview":"ENTRANCE","textChars":8,"textLines":1,"bbox":[666,520,130,20]}
+{"kind":"textbox","id":"sh/kfqhkvyp","slide":9,"text":"LIXIL ジエスタ2","textPreview":"LIXIL ジエスタ2","textChars":11,"textLines":1,"bbox":[666,548,540,30]}
+{"kind":"textbox","id":"sh/lgzid0fa","slide":9,"text":"断熱玄関ドア・電池錠・シリンダー一体型ハンドル","textPreview":"断熱玄関ドア・電池錠・シリンダー一体型ハンドル","textChars":23,"textLines":1,"bbox":[666,586,540,28]}
+{"kind":"textbox","id":"sh/618zm5gv","slide":9,"text":"※掲載写真はメーカー公式の代表イメージ。実際の品番・色・仕様は仕様書を優先します。","textPreview":"※掲載写真はメーカー公式の代表イメージ。実際の品番・色・仕様は仕様書を優先します。","textChars":41,"textLines":1,"bbox":[44,642,1160,24]}
+{"kind":"image","id":"im/ypsjitkv","slide":9,"name":"","alt":"TOTOオクターブLite公式画像","bbox":[44,162,570,330]}
+{"kind":"image","id":"im/jq1krylg","slide":9,"name":"","alt":"LIXILジエスタ2公式画像","bbox":[666,162,570,330]}
+{"kind":"notes","id":"nt/tijmn2","slide":9,"text":""}
+{"kind":"slide","id":"sl/kmo5rw","slide":10,"title":"LOCATION","textShapes":15}
+{"kind":"textbox","id":"sh/ja9s7u5o","slide":10,"text":"LOCATION","textPreview":"LOCATION","textChars":8,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/4bitgzmt","slide":10,"text":"2駅2路線と、日常の施設が身近に","textPreview":"2駅2路線と、日常の施設が身近に","textChars":16,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/5cba94ne","slide":10,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/6dkbip4z","slide":10,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/retsbu5k","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"shape","id":"sh/sf2tkzm5","slide":10,"bbox":[44,175,360,370]}
+{"kind":"textbox","id":"sh/tgbad4nq","slide":10,"text":"交通","textPreview":"交通","textChars":2,"textLines":1,"bbox":[72,202,300,26]}
+{"kind":"shape","id":"sh/mhgr65ov","slide":10,"bbox":[72,248,304,1]}
+{"kind":"textbox","id":"sh/7ipsza5g","slide":10,"text":"朝霞台駅｜東武東上線\n北朝霞駅｜JR武蔵野線","textPreview":"朝霞台駅｜東武東上線 | 北朝霞駅｜JR武蔵野線","textChars":22,"textLines":2,"bbox":[72,290,304,110]}
+{"kind":"textbox","id":"sh/3qlcfexg","slide":10,"text":"徒歩分数は販売資料で要確認","textPreview":"徒歩分数は販売資料で要確認","textChars":13,"textLines":1,"bbox":[72,455,304,48]}
+{"kind":"shape","id":"sh/2pcbm9gv","slide":10,"bbox":[446,175,360,370]}
+{"kind":"textbox","id":"sh/ps3uhofm","slide":10,"text":"買い物","textPreview":"買い物","textChars":3,"textLines":1,"bbox":[474,202,300,26]}
+{"kind":"shape","id":"sh/orudojy1","slide":10,"bbox":[474,248,304,1]}
+{"kind":"textbox","id":"sh/fm1cbuxk","slide":10,"text":"スーパーみらべる 北朝霞店\n浜崎エリアの生活利便施設","textPreview":"スーパーみらべる 北朝霞店 | 浜崎エリアの生活利便施設","textChars":26,"textLines":2,"bbox":[474,290,304,110]}
+{"kind":"textbox","id":"sh/elsbi9gz","slide":10,"text":"各施設までの距離は要確認","textPreview":"各施設までの距離は要確認","textChars":12,"textLines":1,"bbox":[474,455,304,48]}
+{"kind":"shape","id":"sh/1o3ud4fa","slide":10,"bbox":[848,175,360,370]}
+{"kind":"textbox","id":"sh/gnatkzy5","slide":10,"text":"学校","textPreview":"学校","textChars":2,"textLines":1,"bbox":[876,202,300,26]}
+{"kind":"shape","id":"sh/ry1c7ux8","slide":10,"bbox":[876,248,304,1]}
+{"kind":"textbox","id":"sh/6xsbepgn","slide":10,"text":"朝霞第七小学校\n朝霞第二中学校","textPreview":"朝霞第七小学校 | 朝霞第二中学校","textChars":15,"textLines":2,"bbox":[876,290,304,110]}
+{"kind":"textbox","id":"sh/ut8vqp0v","slide":10,"text":"朝霞市公式の通学区域に基づく","textPreview":"朝霞市公式の通学区域に基づく","textChars":14,"textLines":1,"bbox":[876,455,304,48]}
+{"kind":"textbox","id":"sh/vuhczu10","slide":10,"text":"所在地｜埼玉県朝霞市浜崎3丁目17-56","textPreview":"所在地｜埼玉県朝霞市浜崎3丁目17-56","textChars":20,"textLines":1,"bbox":[44,585,800,28]}
+{"kind":"textbox","id":"sh/wvqdszil","slide":10,"text":"※所要時間・距離・営業状況は現地および最新情報をご確認ください。","textPreview":"※所要時間・距離・営業状況は現地および最新情報をご確認ください。","textChars":32,"textLines":1,"bbox":[44,630,900,22]}
+{"kind":"notes","id":"nt/kmo5rw","slide":10,"text":""}
+{"kind":"slide","id":"sl/nebhaz","slide":11,"title":"PROPERTY FACTS","textShapes":22}
+{"kind":"textbox","id":"sh/mdwnidsr","slide":11,"text":"PROPERTY FACTS","textPreview":"PROPERTY FACTS","textChars":14,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/9gnmdsri","slide":11,"text":"物件概要を、1ページに","textPreview":"物件概要を、1ページに","textChars":11,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/ofe5knax","slide":11,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/bi54f29o","slide":11,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/ahwnmxs3","slide":11,"text":"11","textPreview":"11","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"textbox","id":"sh/xk7mhcre","slide":11,"text":"販売価格","textPreview":"販売価格","textChars":4,"textLines":1,"bbox":[44,164,175,24]}
+{"kind":"textbox","id":"sh/wje5o7at","slide":11,"text":"要確認","textPreview":"要確認","textChars":3,"textLines":1,"bbox":[226,160,390,34]}
+{"kind":"shape","id":"sh/rml43y94","slide":11,"bbox":[44,222,560,1]}
+{"kind":"textbox","id":"sh/qlc3atsj","slide":11,"text":"敷地面積","textPreview":"敷地面積","textChars":4,"textLines":1,"bbox":[646,164,175,24]}
+{"kind":"textbox","id":"sh/03ip4fyp","slide":11,"text":"82.64 ㎡","textPreview":"82.64 ㎡","textChars":7,"textLines":1,"bbox":[828,160,390,34]}
+{"kind":"shape","id":"sh/14rqxkzu","slide":11,"bbox":[646,222,560,1]}
+{"kind":"textbox","id":"sh/e1g725gj","slide":11,"text":"延べ床面積","textPreview":"延べ床面積","textChars":5,"textLines":1,"bbox":[44,272,175,24]}
+{"kind":"textbox","id":"sh/f2p8vah4","slide":11,"text":"120.47 ㎡","textPreview":"120.47 ㎡","textChars":8,"textLines":1,"bbox":[226,268,390,34]}
+{"kind":"shape","id":"sh/o7i98zyl","slide":11,"bbox":[44,330,560,1]}
+{"kind":"textbox","id":"sh/p8rq1kz6","slide":11,"text":"容積率対象","textPreview":"容積率対象","textChars":5,"textLines":1,"bbox":[646,272,175,24]}
+{"kind":"textbox","id":"sh/25076pgf","slide":11,"text":"99.36 ㎡","textPreview":"99.36 ㎡","textChars":7,"textLines":1,"bbox":[828,268,390,34]}
+{"kind":"shape","id":"sh/n698zuh0","slide":11,"bbox":[646,330,560,1]}
+{"kind":"textbox","id":"sh/4bypwvyh","slide":11,"text":"構造・階数","textPreview":"構造・階数","textChars":5,"textLines":1,"bbox":[44,380,175,24]}
+{"kind":"textbox","id":"sh/5c7qp0z2","slide":11,"text":"木造・地上3階建て","textPreview":"木造・地上3階建て","textChars":9,"textLines":1,"bbox":[226,376,390,34]}
+{"kind":"shape","id":"sh/lwfedsne","slide":11,"bbox":[44,438,560,1]}
+{"kind":"textbox","id":"sh/kv6x4n6t","slide":11,"text":"間取り","textPreview":"間取り","textChars":3,"textLines":1,"bbox":[646,380,175,24]}
+{"kind":"textbox","id":"sh/zuxwbi58","slide":11,"text":"3LDK相当＋6帖納戸＋車庫","textPreview":"3LDK相当＋6帖納戸＋車庫","textChars":14,"textLines":1,"bbox":[828,376,390,34]}
+{"kind":"shape","id":"sh/yt4f2do3","slide":11,"bbox":[646,438,560,1]}
+{"kind":"textbox","id":"sh/9kfehcnq","slide":11,"text":"駐車","textPreview":"駐車","textChars":2,"textLines":1,"bbox":[44,488,175,24]}
+{"kind":"textbox","id":"sh/8j6x87m5","slide":11,"text":"ビルトインガレージ","textPreview":"ビルトインガレージ","textChars":9,"textLines":1,"bbox":[226,484,390,34]}
+{"kind":"shape","id":"sh/7yxwf25k","slide":11,"bbox":[44,546,560,1]}
+{"kind":"textbox","id":"sh/mxof6xoz","slide":11,"text":"完成予定","textPreview":"完成予定","textChars":4,"textLines":1,"bbox":[646,488,175,24]}
+{"kind":"textbox","id":"sh/hozylcnm","slide":11,"text":"要確認","textPreview":"要確認","textChars":3,"textLines":1,"bbox":[828,484,390,34]}
+{"kind":"shape","id":"sh/wnqxc7m1","slide":11,"bbox":[646,546,560,1]}
+{"kind":"textbox","id":"sh/et0b694j","slide":11,"text":"所在地｜埼玉県朝霞市浜崎3丁目17-56　　図面基準日｜2026年7月9日","textPreview":"所在地｜埼玉県朝霞市浜崎3丁目17-56　　図面基準日｜2026年7月9日","textChars":37,"textLines":1,"bbox":[44,604,1130,24]}
+{"kind":"textbox","id":"sh/fu9cfel4","slide":11,"text":"※面積は配置図記載値。延べ床面積には車庫部分を含みます。価格・完成予定は販売担当者へご確認ください。","textPreview":"※面積は配置図記載値。延べ床面積には車庫部分を含みます。価格・完成予定は販売担当者へご確認ください。","textChars":50,"textLines":1,"bbox":[44,637,1130,24]}
+{"kind":"notes","id":"nt/nebhaz","slide":11,"text":""}
+{"kind":"slide","id":"sl/tpf0ym","slide":12,"title":"INFORMATION","textShapes":20}
+{"kind":"textbox","id":"sh/ytov6lcv","slide":12,"text":"INFORMATION","textPreview":"INFORMATION","textChars":11,"textLines":1,"bbox":[44,34,680,22]}
+{"kind":"textbox","id":"sh/lgzu1gv6","slide":12,"text":"お問い合わせ・現地ご案内","textPreview":"お問い合わせ・現地ご案内","textChars":12,"textLines":1,"bbox":[44,66,1120,52]}
+{"kind":"shape","id":"sh/0f6d8bul","slide":12,"bbox":[44,126,1192,1]}
+{"kind":"textbox","id":"sh/bqxcv6d4","slide":12,"text":"ASAKA HAMAZAKI 3-CHOME / 2","textPreview":"ASAKA HAMAZAKI 3-CHOME / 2","textChars":26,"textLines":1,"bbox":[44,678,500,18]}
+{"kind":"textbox","id":"sh/qpov21cj","slide":12,"text":"12","textPreview":"12","textChars":2,"textLines":1,"bbox":[1185,676,50,18]}
+{"kind":"textbox","id":"sh/dsfuxgva","slide":12,"text":"現地案内図（概略）","textPreview":"現地案内図（概略）","textChars":9,"textLines":1,"bbox":[44,160,450,30]}
+{"kind":"shape","id":"sh/cr6d4bup","slide":12,"bbox":[44,210,690,390]}
+{"kind":"shape","id":"sh/3mdcrmd8","slide":12,"bbox":[94,390,590,14]}
+{"kind":"shape","id":"sh/2l4vy1wn","slide":12,"bbox":[390,245,14,315]}
+{"kind":"shape","id":"sh/o72xcril","slide":12,"bbox":[152,345,18,18]}
+{"kind":"shape","id":"sh/p8bylwj6","slide":12,"bbox":[228,425,18,18]}
+{"kind":"shape","id":"sh/250fah0f","slide":12,"bbox":[448,310,18,18]}
+{"kind":"shape","id":"sh/369gjm10","slide":12,"bbox":[575,455,30,30]}
+{"kind":"textbox","id":"sh/gjix87ip","slide":12,"text":"朝霞台駅\n東武東上線","textPreview":"朝霞台駅 | 東武東上線","textChars":10,"textLines":2,"bbox":[105,285,130,48]}
+{"kind":"textbox","id":"sh/hkryhcja","slide":12,"text":"北朝霞駅\nJR武蔵野線","textPreview":"北朝霞駅 | JR武蔵野線","textChars":11,"textLines":2,"bbox":[175,455,150,48]}
+{"kind":"textbox","id":"sh/uh0f6h0j","slide":12,"text":"朝霞第七小","textPreview":"朝霞第七小","textChars":5,"textLines":1,"bbox":[420,258,150,24]}
+{"kind":"textbox","id":"sh/fi9gf214","slide":12,"text":"現地\n浜崎3丁目17-56","textPreview":"現地 | 浜崎3丁目17-56","textChars":13,"textLines":2,"bbox":[530,500,170,48]}
+{"kind":"textbox","id":"sh/0fmhkbit","slide":12,"text":"スーパーみらべる\n北朝霞店","textPreview":"スーパーみらべる | 北朝霞店","textChars":13,"textLines":2,"bbox":[435,430,150,48]}
+{"kind":"textbox","id":"sh/l0vytgje","slide":12,"text":"※位置関係を示す概略図です。正確な経路は地図アプリ等でご確認ください。","textPreview":"※位置関係を示す概略図です。正確な経路は地図アプリ等でご確認ください。","textChars":35,"textLines":1,"bbox":[44,615,690,24]}
+{"kind":"textbox","id":"sh/9wrydgbi","slide":12,"text":"CONTACT","textPreview":"CONTACT","textChars":7,"textLines":1,"bbox":[810,165,250,22]}
+{"kind":"textbox","id":"sh/8vix4bax","slide":12,"text":"販売窓口","textPreview":"販売窓口","textChars":4,"textLines":1,"bbox":[810,220,160,24]}
+{"kind":"textbox","id":"sh/7u9gb6tc","slide":12,"text":"要確認","textPreview":"要確認","textChars":3,"textLines":1,"bbox":[810,250,360,42]}
+{"kind":"shape","id":"sh/mt0f21sr","slide":12,"bbox":[810,315,390,1]}
+{"kind":"textbox","id":"sh/ls7y9wbm","slide":12,"text":"TEL","textPreview":"TEL","textChars":3,"textLines":1,"bbox":[810,350,100,24]}
+{"kind":"textbox","id":"sh/kryx0ra1","slide":12,"text":"要確認","textPreview":"要確認","textChars":3,"textLines":1,"bbox":[940,346,260,32]}
+{"kind":"textbox","id":"sh/zqpg7mtg","slide":12,"text":"担当","textPreview":"担当","textChars":2,"textLines":1,"bbox":[810,410,100,24]}
+{"kind":"textbox","id":"sh/ypgfyhsv","slide":12,"text":"要確認","textPreview":"要確認","textChars":3,"textLines":1,"bbox":[940,406,260,32]}
+{"kind":"textbox","id":"sh/x47y5wba","slide":12,"text":"ご内覧・資金計画・仕様確認など、\nお気軽に販売担当者へお申し付けください。","textPreview":"ご内覧・資金計画・仕様確認など、 | お気軽に販売担当者へお申し付けください。","textChars":37,"textLines":2,"bbox":[810,500,390,72]}
+{"kind":"textbox","id":"sh/c3yxwrap","slide":12,"text":"本資料は図面・仕様書を基に作成した提案資料です。図面と現況が異なる場合は現況を優先します。","textPreview":"本資料は図面・仕様書を基に作成した提案資料です。図面と現況が異なる場合は現況を優先します。","textChars":45,"textLines":1,"bbox":[810,614,390,38]}
+{"kind":"notes","id":"nt/tpf0ym","slide":12,"text":""}
