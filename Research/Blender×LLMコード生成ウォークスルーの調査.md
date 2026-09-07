@@ -65,7 +65,7 @@
 - Buildify(geometry nodes の建物生成)・Archipack: 壁・窓・階段のパラメトリック生成。日本の住宅向け建材・サッシ・設備(キッチン/UB)の Blender アセットの定番入手先は未確認 ❓ → 各メーカーの 3D データ(LIXIL・TOTO・ニチハ等の BIM/CAD データ)を Blender に読み込めるか要検証
 
 ### headless レンダーの制約 ✅⚠️
-- macOS では **Eevee は headless(`-b`)非対応**(Linux のみ)。Mac で無人レンダーするなら **Cycles 一択**
+- ~~macOS では Eevee は headless 非対応~~ → **訂正(2026-09-06 実測)**: Blender 5.2.1 / M1 Mac で `-b -E BLENDER_EEVEE` は動作した。1280×720 で 1フレーム 6.6秒(Cycles 64サンプルは約120秒)。動画は Eevee、静止画パースは Cycles の使い分けが現実的
 - Cycles は Apple Silicon の Metal GPU に対応(3.x以降)。1280×720・デノイズありで 1フレーム数秒〜数十秒が目安 ⚠️ → 24fps×35秒=840フレームで **数時間/本**の見込み。急ぐなら RunPod 等のクラウドGPU(RTX 4090 で1時間 $0.5前後 ⚠️)にレンダーだけ投げる
 - 写実性を上げるほどレンダー時間が伸びるので、**SNS リール用は 720p・24fps・サンプル数低め+デノイズ**で割り切り、SUUMO 用静止画だけ高サンプルにする設計が現実的
 

@@ -1,0 +1,5 @@
+*.blend1
+render_preview/
+**/render/anim*/
+**/render/*.log
+/README.md
