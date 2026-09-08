@@ -1,7 +1,11 @@
 import fs from "node:fs/promises";
 import { Presentation, PresentationFile } from "../tmp/pdfs/node_modules/@oai/artifact-tool/dist/artifact_tool.mjs";
 
-const ROOT = "/Users/Jun/Documents/AI Architecture";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+// スクリプト自身の位置からリポジトリルートを解決する（ワークスペース名に依存しない）
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SRC = `${ROOT}/output/client_presentation`;
 const OUT = `${ROOT}/Sales Presentation Materials`;
 const FONT = "Arial Unicode MS";
